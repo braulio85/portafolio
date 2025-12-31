@@ -12,18 +12,6 @@
                 "title_short_nav": "Portafolio",
                 "title_long_prefix": "Explora",
                 "title_long": "Mi {{Portafolio}}"
-            },
-            "fr": {
-                "title_short": "Portfolio",
-                "title_short_nav": "Portfolio",
-                "title_long_prefix": "Découvrez",
-                "title_long": "Mon {{Portfolio}}"
-            },
-            "ko": {
-                "title_short": "포트폴리오",
-                "title_short_nav": "포트폴리오",
-                "title_long_prefix": "이것은 내",
-                "title_long": "{{포트폴리오}}입니다"
             }
         }
     },
@@ -44,18 +32,6 @@
                     "category_apps": "Apps",
                     "category_web": "Web",
                     "category_utilities": "Utilidades"
-                },
-                "fr": {
-                    "category_all": "Tout",
-                    "category_apps": "Apps",
-                    "category_web": "Web",
-                    "category_utilities": "Utilitaires"
-                },
-                "ko": {
-                    "category_all": "모두",
-                    "category_apps": "앱",
-                    "category_web": "웹",
-                    "category_utilities": "유틸리티"
                 }
             },
             "settings": {
@@ -67,361 +43,336 @@
                 {
                     "id": 1,
                     "categoryId": "category_utilities",
-                    "img": "images/pictures/portfolio-project-logo-3.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIcon": "fa-solid fa-shield-halved",
+                    "faIconColors": { "bg": "#68217A", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://github.com", "tooltipString": "see_on_github", "faIcon": "fa-brands fa-github"},
-                            {"href": "https://npm.com", "tooltipString": "see_on_npm", "faIcon": "fa-brands fa-npm"}
+                            {
+                                "href": "https://github.com/Jbraulio85/auth_service",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-                            "images/pictures/screenshot-demo-landscape-1.png",
-                            "images/pictures/screenshot-demo-landscape-2.png",
-                            "images/pictures/screenshot-demo-landscape-3.png",
-                            "images/pictures/screenshot-demo-landscape-4.png",
-                            "images/pictures/screenshot-demo-landscape-5.png"
-                        ],
+                        "screenshots": [],
                         "screenshotsAspectRatio": "16:9",
-                        "youtubeVideo": "https://www.youtube.com/watch?v=PnV8p1xm7-o"
+                        "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "BrainPulse",
-                            "text": "A <b>RESTful API</b> backend built with <b>Node.js</b>, designed for high-performance data processing and real-time event handling.",
-                            "tags": ["API", "REST", "Backend"]
+                            "title": "Authentication Service",
+                            "text": "Enterprise-grade authentication API built with <b>C#</b> and <b>ASP.NET</b>. Provides secure token-based authentication, JWT validation, and user management with EF Core."
                         },
                         "es": {
-                            "text": "Una <b>API RESTful</b> construida con <b>Node.js</b>, diseñada para el procesamiento de datos de alto rendimiento y la gestión de eventos en tiempo real.",
-                            "tags": ["API", "REST", "Backend"]
-                        },
-                        "fr": {
-                            "text": "Un backend <b>API RESTful</b> construit avec <b>Node.js</b>, conçu pour le traitement de données haute performance et la gestion d'événements en temps réel.",
-                            "tags": ["API", "REST", "Backend"]
-                        },
-                        "ko": {
-                            "text": "<b>Node.js</b>로 구축된 <b>RESTful API</b> 백엔드로, 고성능 데이터 처리 및 실시간 이벤트 처리용으로 설계되었습니다.",
-                            "tags": ["API", "REST", "Backend"]
+                            "title": "Servicio de Autenticación",
+                            "text": "API de autenticación de nivel empresarial construida con <b>C#</b> y <b>ASP.NET</b>. Proporciona autenticación segura basada en tokens y gestión de usuarios."
                         }
                     }
                 },
                 {
                     "id": 2,
-                    "categoryId": "category_apps",
-                    "img": "images/pictures/portfolio-project-logo-7.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "categoryId": "category_utilities",
+                    "faIcon": "fa-solid fa-leaf",
+                    "faIconColors": { "bg": "#6DB33F", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://apple.com", "tooltipString": "see_on_app_store", "faIcon": "fa-brands fa-apple"},
-                            {"href": "https://google.com", "tooltipString": "see_on_google_play", "faIcon": "fa-brands fa-google-play"}
+                            {
+                                "href": "https://github.com/Jbraulio85/Spring_ApiRest_IN5BM",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-                            "images/pictures/screenshot-demo-portrait-1.png",
-                            "images/pictures/screenshot-demo-portrait-2.png",
-                            "images/pictures/screenshot-demo-portrait-3.png",
-                            "images/pictures/screenshot-demo-portrait-4.png",
-                            "images/pictures/screenshot-demo-portrait-5.png",
-                            "images/pictures/screenshot-demo-portrait-6.png"
-                        ],
-                        "screenshotsAspectRatio": "9:16",
-                        "youtubeVideo": "https://www.youtube.com/watch?v=TfgBHC5gvTI"
-                    },
-                    "locales": {
-                        "en": {
-                            "title": "MailM8",
-                            "text": "A cross-platform email client built with <b>Flutter</b>, providing efficient communication with an intuitive UI for <b>managing emails</b>.",
-                            "tags": ["Flutter", "E-mail", "Communication"]
-                        },
-                        "es": {
-                            "text": "Un cliente de correo electrónico multiplataforma construido con <b>Flutter</b>, que ofrece comunicación eficiente y una interfaz intuitiva para la <b>gestión de correos electrónicos</b>.",
-                            "tags": ["Flutter", "Correo", "Comunicación"]
-                        },
-                        "fr": {
-                            "text": "Un client de messagerie multiplateforme construit avec <b>Flutter</b>, offrant une communication efficace et une interface intuitive pour <b>gérer les e-mails</b>.",
-                            "tags": ["Flutter", "E-mail", "Communication"]
-                        },
-                        "ko": {
-                            "text": "<b>Flutter</b>로 구축된 크로스플랫폼 이메일 클라이언트로, 이메일 <b>관리</b>를 위한 직관적인 UI를 통해 효율적인 소통을 제공합니다.",
-                            "tags": ["Flutter", "이메일", "소통"]
-                        }
-                    }
-                },
-                {
-                    "id": 3,
-                    "categoryId": "category_apps",
-                    "img": "images/pictures/portfolio-project-logo-6.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "preview": {
-                        "links": [
-                            {"href": "https://apple.com", "tooltipString": "see_on_app_store", "faIcon": "fa-brands fa-apple"},
-                            {"href": "https://google.com", "tooltipString": "see_on_google_play", "faIcon": "fa-brands fa-google-play"}
-                        ],
-                        "screenshots": [
-                            "images/pictures/screenshot-demo-landscape-1.png",
-                            "images/pictures/screenshot-demo-landscape-2.png",
-                            "images/pictures/screenshot-demo-landscape-3.png",
-                            "images/pictures/screenshot-demo-landscape-4.png",
-                            "images/pictures/screenshot-demo-landscape-5.png"
-                        ],
+                        "screenshots": [],
                         "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "Light Blue",
-                            "text": "A fully-featured productivity app developed with <b>React Native</b>, enabling users to organize tasks, notes, and projects across multiple devices. It offers <b>cloud sync</b>, intuitive UI, and collaboration features.",
-                            "tags": ["React", "Organization", "Notes"]
+                            "title": "Spring REST API",
+                            "text": "RESTful API built with <b>Spring Boot</b> and <b>Java</b>. Features microservices architecture, JPA entity mapping, complex business logic, and comprehensive error handling."
                         },
                         "es": {
-                            "text": "Una app de productividad con todas las funciones, desarrollada con <b>React Native</b>, que permite a los usuarios organizar tareas, notas y proyectos en varios dispositivos. Ofrece <b>sincronización en la nube</b>, interfaz intuitiva y características de colaboración.",
-                            "tags": ["React", "Organización", "Notas"]
+                            "title": "API REST Spring",
+                            "text": "API RESTful construida con <b>Spring Boot</b> y <b>Java</b>. Incluye arquitectura de microservicios, mapeo de entidades JPA y manejo completo de errores."
+                        }
+                    }
+                },
+                {
+                    "id": 3,
+                    "categoryId": "category_web",
+                    "faIcon": "fa-solid fa-video",
+                    "faIconColors": { "bg": "#9146FF", "fill": "#ffffff" },
+                    "preview": {
+                        "links": [
+                            {
+                                "href": "https://github.com/Jbraulio85/React_KinalCast_2024",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
+                        ],
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
+                        "youtubeVideo": ""
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "KinalCast - Twitch Clone",
+                            "text": "Live streaming platform clone built with <b>React</b>, <b>TypeScript</b>, and modern web technologies. Features channel management, live chat, and video streaming integration."
                         },
-                        "fr": {
-                            "text": "Une application de productivité complète développée avec <b>React Native</b>, permettant aux utilisateurs d'organiser tâches, notes et projets sur plusieurs appareils. Elle offre <b>synchronisation cloud</b>, interface intuitive et fonctionnalités de collaboration.",
-                            "tags": ["React", "Organisation", "Notes"]
-                        },
-                        "ko": {
-                            "text": "<b>React Native</b>로 개발된 기능이 풍부한 생산성 앱으로, 사용자가 여러 기기에서 작업, 메모, 프로젝트를 <b>클라우드 동기화</b>와 직관적인 UI로 관리할 수 있습니다.",
-                            "tags": ["React", "조직", "메모"]
+                        "es": {
+                            "title": "KinalCast - Clon de Twitch",
+                            "text": "Plataforma de transmisión en vivo construida con <b>React</b>, <b>TypeScript</b> y tecnologías web modernas. Incluye gestión de canales y chat en vivo."
                         }
                     }
                 },
                 {
                     "id": 4,
-                    "categoryId": "category_web",
-                    "img": "images/pictures/portfolio-project-logo-1.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "categoryId": "category_utilities",
+                    "faIcon": "fa-brands fa-docker",
+                    "faIconColors": { "bg": "#2496ED", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://cash.com", "tooltipString": "open_website", "faIcon": "fa-solid fa-link"}
+                            {
+                                "href": "https://github.com/Jbraulio85/Zeabur-deploy-docker-MERN",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-
-                        ],
-                        "screenshotsAspectRatio": "",
-                        "youtubeVideo": "https://www.youtube.com/watch?v=MQe_MoJ7Iww"
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
+                        "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "SmartCash",
-                            "text": "A finance website built using <b>Next.js</b>, allowing users to <b>track budgets</b> and manage their money with interactive charts and insights.",
-                            "tags": ["Next.js", "Finance", "Money"]
+                            "title": "MERN Docker Deployment",
+                            "text": "Complete MERN stack application with <b>Docker</b> containerization and <b>Zeabur</b> cloud deployment. Features MongoDB integration, Express.js backend, and React frontend with CI/CD pipeline."
                         },
                         "es": {
-                            "title": "SmartCash",
-                            "text": "Un sitio web financiero construido con <b>Next.js</b>, que permite a los usuarios <b>seguir presupuestos</b> y gestionar su dinero con gráficos interactivos e ideas.",
-                            "tags": ["Next.js", "Finanzas", "Dinero"]
-                        },
-                        "fr": {
-                            "title": "SmartCash",
-                            "text": "Un site web financier construit avec <b>Next.js</b>, permettant aux utilisateurs de <b>suivre les budgets</b> et de gérer leur argent avec des graphiques interactifs et des analyses.",
-                            "tags": ["Next.js", "Finance", "Argent"]
-                        },
-                        "ko": {
-                            "title": "SmartCash",
-                            "text": "<b>Next.js</b>로 구축된 금융 웹사이트로, 사용자가 <b>예산을 추적</b>하고 상호작용하는 차트와 통찰력으로 자금을 관리할 수 있습니다.",
-                            "tags": ["Next.js", "금융", "돈"]
+                            "title": "Despliegue MERN con Docker",
+                            "text": "Aplicación completa del stack MERN con containerización en <b>Docker</b> y despliegue en la nube con <b>Zeabur</b>. Incluye integración de MongoDB y pipeline CI/CD."
                         }
                     }
                 },
                 {
                     "id": 5,
-                    "categoryId": "category_apps",
-                    "img": "images/pictures/portfolio-project-logo-2.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "categoryId": "category_web",
+                    "faIcon": "fa-solid fa-code",
+                    "faIconColors": { "bg": "#FF6B6B", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://apple.com", "tooltipString": "see_on_app_store", "faIcon": "fa-brands fa-apple"},
-                            {"href": "https://google.com", "tooltipString": "see_on_google_play", "faIcon": "fa-brands fa-google-play"}
+                            {
+                                "href": "https://www.shucode.lat/",
+                                "tooltipString": "visit_website",
+                                "faIcon": "fa-solid fa-globe"
+                            }
                         ],
-                        "screenshots": [
-
-                        ],
-                        "screenshotsAspectRatio": "",
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "Snappy",
-                            "text": "A powerful photography app designed with <b>Swift</b> for iOS and Android, featuring <b>advanced camera controls</b>, editing tools, and AI-powered filters for quick photo enhancements.",
-                            "tags": ["Swift", "Photography", "Camera"]
+                            "title": "ShuCode.lat",
+                            "text": "Personal development portfolio and tech blog built from scratch. Modern full-stack web application showcasing projects, articles, and professional experience. <i>(Private repository)</i>"
                         },
                         "es": {
-                            "title": "Snappy",
-                            "text": "Una app de fotografía potente diseñada con <b>Swift</b> para iOS y Android, con <b>controles avanzados de cámara</b>, herramientas de edición y filtros potenciados por IA para mejoras rápidas de fotos.",
-                            "tags": ["Swift", "Fotografía", "Cámara"]
-                        },
-                        "fr": {
-                            "title": "Snappy",
-                            "text": "Une application de photographie puissante conçue avec <b>Swift</b> pour iOS et Android, avec des <b>contrôles avancés de la caméra</b>, des outils d'édition et des filtres IA pour des améliorations rapides des photos.",
-                            "tags": ["Swift", "Photographie", "Caméra"]
-                        },
-                        "ko": {
-                            "title": "Snappy",
-                            "text": "<b>Swift</b>로 설계된 강력한 사진 앱으로, iOS 및 Android에서 <b>고급 카메라 제어</b>, 편집 도구, AI 기반 필터를 통해 빠르게 사진을 보정할 수 있습니다.",
-                            "tags": ["Swift", "사진", "카메라"]
+                            "title": "ShuCode.lat",
+                            "text": "Portafolio de desarrollo personal y blog técnico construido desde cero. Aplicación web full-stack moderna que muestra proyectos, artículos y experiencia profesional. <i>(Repositorio privado)</i>"
                         }
                     }
                 },
                 {
                     "id": 6,
-                    "categoryId": "category_web",
-                    "img": "images/pictures/portfolio-project-logo-5.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "categoryId": "category_utilities",
+                    "faIcon": "fa-solid fa-book",
+                    "faIconColors": { "bg": "#3498DB", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://google.com", "tooltipString": "open_website", "faIcon": "fa-solid fa-link"}
+                            {
+                                "href": "https://github.com/Jbraulio85/smart_library",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-
-                        ],
-                        "screenshotsAspectRatio": "",
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "Sweet Scoops",
-                            "text": "A recipe website built with <b>WordPress</b> and WooCommerce, featuring a rich collection of <b>dessert recipes</b> and an integrated e-commerce platform.",
-                            "tags": ["WooCommerce", "Food", "Desserts"]
+                            "title": "Smart Library System",
+                            "text": "Full-stack library management system with client-server architecture built with <b>JavaScript</b>. Features book catalog, user management, lending system, and real-time data synchronization."
                         },
                         "es": {
-                            "title": "Sweet Scoops",
-                            "text": "Un sitio web de recetas construido con <b>WordPress</b> y WooCommerce, con una rica colección de <b>recetas de postres</b> y una plataforma de comercio electrónico integrada.",
-                            "tags": ["WooCommerce", "Comida", "Postres"]
-                        },
-                        "fr": {
-                            "title": "Sweet Scoops",
-                            "text": "Un site de recettes construit avec <b>WordPress</b> et WooCommerce, présentant une riche collection de <b>recettes de desserts</b> et une plateforme de commerce électronique intégrée.",
-                            "tags": ["WooCommerce", "Cuisine", "Desserts"]
-                        },
-                        "ko": {
-                            "title": "Sweet Scoops",
-                            "text": "<b>WordPress</b>와 WooCommerce로 구축된 레시피 웹사이트로, 풍부한 <b>디저트 레시피</b> 모음과 통합된 전자상거래 플랫폼을 제공합니다.",
-                            "tags": ["WooCommerce", "음식", "디저트"]
+                            "title": "Sistema de Biblioteca Inteligente",
+                            "text": "Sistema de gestión de bibliotecas full-stack con arquitectura cliente-servidor construido con <b>JavaScript</b>. Incluye catálogo de libros, gestión de usuarios y sincronización de datos en tiempo real."
                         }
                     }
                 },
                 {
                     "id": 7,
-                    "categoryId": "category_web",
-                    "img": "",
-                    "faIcon": "fa-solid fa-guitar",
-                    "faIconColors": {"bg": "#7671AA", "fill": "#EEEEEE"},
+                    "categoryId": "category_utilities",
+                    "faIcon": "fa-solid fa-key",
+                    "faIconColors": { "bg": "#F39C12", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://google.com", "tooltipString": "open_website", "faIcon": "fa-solid fa-link"}
+                            {
+                                "href": "https://github.com/Jbraulio85/Java-AuthSystem",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-
-                        ],
-                        "screenshotsAspectRatio": "",
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "RockVerse",
-                            "text": "A dynamic music and entertainment website developed with <b>Django</b>, showcasing rock music news, events, and <b>streaming content</b>.",
-                            "tags": ["Django", "Music", "Rock"]
+                            "title": "Java Authentication System",
+                            "text": "Desktop authentication system (Login & Register) built with <b>JavaFX v21</b> and <b>MySQL</b> persistence. Features user registration, secure login, and database integration for data management."
                         },
                         "es": {
-                            "title": "RockVerse",
-                            "text": "Un sitio web dinámico de música y entretenimiento desarrollado con <b>Django</b>, que muestra noticias de música rock, eventos y <b>contenido en streaming</b>.",
-                            "tags": ["Django", "Música", "Rock"]
-                        },
-                        "fr": {
-                            "title": "RockVerse",
-                            "text": "Un site web de musique et de divertissement dynamique développé avec <b>Django</b>, mettant en avant des nouvelles, événements et <b>contenu en streaming</b> sur le rock.",
-                            "tags": ["Django", "Musique", "Rock"]
-                        },
-                        "ko": {
-                            "title": "RockVerse",
-                            "text": "<b>Django</b>로 개발된 동적인 음악 및 엔터테인먼트 웹사이트로, 록 음악 뉴스, 이벤트 및 <b>스트리밍 콘텐츠</b>를 제공합니다.",
-                            "tags": ["Django", "음악", "록"]
+                            "title": "Sistema de Autenticación Java",
+                            "text": "Sistema de autenticación de escritorio (Login & Register) construido con <b>JavaFX v21</b> y persistencia en <b>MySQL</b>. Incluye registro de usuarios, login seguro e integración con base de datos."
                         }
                     }
                 },
                 {
                     "id": 8,
-                    "categoryId": "category_utilities",
-                    "img": "images/pictures/portfolio-project-logo-4.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "categoryId": "category_web",
+                    "faIcon": "fa-solid fa-server",
+                    "faIconColors": { "bg": "#2ECC71", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-
+                            {
+                                "href": "https://github.com/Jbraulio85/Random-Project-Full",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-
-                        ],
-                        "screenshotsAspectRatio": "",
-                        "youtubeVideo": "https://www.youtube.com/watch?v=bf3Lz33nHy0"
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
+                        "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "Soccer Analytics",
-                            "text": "An AI-powered sports analytics platform built with <b>Python</b> and <b>TensorFlow</b>, offering detailed soccer <b>predictions</b> and team management tools.",
-                            "tags": ["AI", "Prediction", "Soccer"]
+                            "title": "Full-Stack Random Project",
+                            "text": "Dockerized full-stack application with <b>Docker Compose</b> orchestration, <b>Nginx</b> reverse proxy, SSL/HTTPS configuration, and separate client/server architecture. Production-ready deployment setup."
                         },
                         "es": {
-                            "title": "Soccer Analytics",
-                            "text": "Una plataforma de análisis deportivo impulsada por IA construida con <b>Python</b> y <b>TensorFlow</b>, que ofrece <b>predicciones</b> detalladas de fútbol y herramientas de gestión de equipos.",
-                            "tags": ["IA", "Predicción", "Fútbol"]
-                        },
-                        "fr": {
-                            "title": "Soccer Analytics",
-                            "text": "Une plateforme d'analytique sportive alimentée par IA construite avec <b>Python</b> et <b>TensorFlow</b>, offrant des <b>prédictions</b> détaillées pour le football et des outils de gestion d'équipe.",
-                            "tags": ["IA", "Prédiction", "Football"]
-                        },
-                        "ko": {
-                            "title": "Soccer Analytics",
-                            "text": "<b>Python</b> 및 <b>TensorFlow</b>로 구축된 AI 기반 스포츠 분석 플랫폼으로, 축구에 대한 <b>예측</b> 및 팀 관리 도구를 제공합니다.",
-                            "tags": ["AI", "예측", "축구"]
+                            "title": "Proyecto Full-Stack Random",
+                            "text": "Aplicación full-stack dockerizada con orquestación <b>Docker Compose</b>, proxy inverso <b>Nginx</b>, configuración SSL/HTTPS y arquitectura cliente/servidor separada. Setup listo para producción."
                         }
                     }
                 },
                 {
                     "id": 9,
                     "categoryId": "category_apps",
-                    "img": "",
-                    "faIcon": "fa-solid fa-truck-fast",
-                    "faIconColors": {"bg": "#007396", "fill": "#EEEEEE"},
+                    "faIcon": "fa-solid fa-mobile-screen-button",
+                    "faIconColors": { "bg": "#E74C3C", "fill": "#ffffff" },
                     "preview": {
                         "links": [
-                            {"href": "https://apple.com", "tooltipString": "see_on_app_store", "faIcon": "fa-brands fa-apple"},
-                            {"href": "https://google.com", "tooltipString": "see_on_google_play", "faIcon": "fa-brands fa-google-play"},
-                            {"href": "https://windows.com", "tooltipString": "see_on_windows_store", "faIcon": "fa-brands fa-windows"}
+                            {
+                                "href": "https://github.com/Jbraulio85/ReactNativePPokemon",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
-                        "screenshots": [
-
-                        ],
-                        "screenshotsAspectRatio": "",
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
                     },
                     "locales": {
                         "en": {
-                            "title": "QuickDrop",
-                            "text": "A cross-platform delivery app built with <b>React Native</b> and a <b>Node.js backend</b>, featuring <b>real-time tracking</b> and seamless integration with multiple platforms.",
-                            "tags": ["React Native", "Delivery", "Real-Time Tracking"]
+                            "title": "Pokémon Pokedex App",
+                            "text": "Pokedex mobile application built with <b>React Native</b> and <b>Expo</b>. Cross-platform app featuring Pokémon data browsing, detailed information, and modern mobile UI. Based on Platzi React Native course."
                         },
                         "es": {
-                            "title": "QuickDrop",
-                            "text": "Una app de entregas multiplataforma construida con <b>React Native</b> y un backend de <b>Node.js</b>, con <b>seguimiento en tiempo real</b> e integración perfecta en múltiples plataformas.",
-                            "tags": ["React Native", "Entrega", "Seguimiento"]
+                            "title": "App Pokedex Pokémon",
+                            "text": "Aplicación móvil Pokedex construida con <b>React Native</b> y <b>Expo</b>. App multiplataforma con navegación de datos Pokémon, información detallada y UI móvil moderna. Basado en curso de Platzi."
+                        }
+                    }
+                },
+                {
+                    "id": 10,
+                    "categoryId": "category_web",
+                    "faIcon": "fa-solid fa-graduation-cap",
+                    "faIconColors": { "bg": "#4CAF50", "fill": "#ffffff" },
+                    "preview": {
+                        "links": [
+                            {
+                                "href": "https://www.shucode.lat/",
+                                "tooltipString": "visit_website",
+                                "faIcon": "fa-solid fa-globe"
+                            }
+                        ],
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
+                        "youtubeVideo": ""
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "CET - Kinal School Management System",
+                            "text": "Comprehensive educational administrative software for managing grades, donations, enrollments, and reports. Built with <b>Laravel</b>, <b>Inertia.js</b>, and <b>Vue.js</b>. <i>(Private repository)</i>"
                         },
-                        "fr": {
-                            "title": "QuickDrop",
-                            "text": "Une application de livraison multiplateforme construite avec <b>React Native</b> et un backend <b>Node.js</b>, avec <b>suivi en temps réel</b> et intégration fluide sur plusieurs plateformes.",
-                            "tags": ["React Native", "Livraison", "Suivi"]
+                        "es": {
+                            "title": "CET - Sistema Administrativo Kinal",
+                            "text": "Software administrativo educativo completo para gestión de notas, donaciones, inscripciones y reportes. Construido con <b>Laravel</b>, <b>Inertia.js</b> y <b>Vue.js</b>. <i>(Repositorio privado)</i>"
+                        }
+                    }
+                },
+                {
+                    "id": 11,
+                    "categoryId": "category_utilities",
+                    "faIcon": "fa-solid fa-brain",
+                    "faIconColors": { "bg": "#9C27B0", "fill": "#ffffff" },
+                    "preview": {
+                        "links": [
+                            {
+                                "href": "https://www.shucode.lat/",
+                                "tooltipString": "visit_website",
+                                "faIcon": "fa-solid fa-globe"
+                            }
+                        ],
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
+                        "youtubeVideo": ""
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "KIARA - Kinal's AI Model",
+                            "text": "Exclusive artificial intelligence model developed for Kinal. Custom-trained AI system for educational and institutional purposes. <i>(Private repository)</i>"
                         },
-                        "ko": {
-                            "title": "QuickDrop",
-                            "text": "<b>React Native</b>와 <b>Node.js</b> 백엔드로 구축된 크로스플랫폼 배송 앱으로, <b>실시간 추적</b> 및 여러 플랫폼과의 원활한 통합을 제공합니다.",
-                            "tags": ["React Native", "배송", "실시간 추적"]
+                        "es": {
+                            "title": "KIARA - Modelo de IA de Kinal",
+                            "text": "Modelo de inteligencia artificial exclusivo desarrollado para Kinal. Sistema de IA personalizado para propósitos educativos e institucionales. <i>(Repositorio privado)</i>"
+                        }
+                    }
+                },
+                {
+                    "id": 12,
+                    "categoryId": "category_utilities",
+                    "faIcon": "fa-solid fa-file-invoice",
+                    "faIconColors": { "bg": "#FF5722", "fill": "#ffffff" },
+                    "preview": {
+                        "links": [
+                            {
+                                "href": "https://www.shucode.lat/",
+                                "tooltipString": "visit_website",
+                                "faIcon": "fa-solid fa-globe"
+                            }
+                        ],
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "16:9",
+                        "youtubeVideo": ""
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "FEEL Integrations - DTE Certification API",
+                            "text": "Integration API for electronic invoice and receipt certification (DTE). Handles validation, digital signatures, and compliance with tax authority requirements. <i>(Private repository)</i>"
+                        },
+                        "es": {
+                            "title": "Integraciones FEEL - API Certificación DTE",
+                            "text": "API de integración para certificación de facturas y recibos electrónicos (DTE). Maneja validación, firmas digitales y cumplimiento de requisitos tributarios. <i>(Repositorio privado)</i>"
                         }
                     }
                 }

@@ -1,4 +1,4 @@
-@import "/src/styles/extend.scss";
+@import '/src/styles/extend.scss';
 
 div.article-portfolio-items {
     --item-gap: 40px;
@@ -26,7 +26,8 @@ div.article-portfolio-items {
 }
 
 /** ---------- 2 ITEMS PER ROW ---------------- */
-div.article-portfolio-items-2-per-row, div.article-portfolio-items-3-per-row {
+div.article-portfolio-items-2-per-row,
+div.article-portfolio-items-3-per-row {
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -54,18 +55,18 @@ div.article-portfolio-item-avatar {
     height: var(--avatar-size);
     border: var(--avatar-border-size) solid var(--theme-boards-background);
     border-radius: 100%;
-    font-size: calc(var(--avatar-size)/2.3);
+    font-size: calc(var(--avatar-size) / 2.3);
 
     position: absolute;
-    top: calc(var(--avatar-size)*-0.13);
-    right: calc(var(--avatar-size)*-0.13);
+    top: calc(var(--avatar-size) * -0.13);
+    right: calc(var(--avatar-size) * -0.13);
 }
 
 div.article-portfolio-item-title {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: calc(100% - var(--avatar-size)*0.83);
+    width: calc(100% - var(--avatar-size) * 0.83);
 
     h5 {
         font-weight: bold;

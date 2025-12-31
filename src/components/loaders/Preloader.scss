@@ -1,10 +1,10 @@
-@import "/src/styles/extend.scss";
+@import '/src/styles/extend.scss';
 
 div.preloader-window {
     position: fixed;
     z-index: $z-index-loader;
     background-color: $loader-background;
-    color: $loader-contrast;
+    color: #ffffff;
 
     width: 100vw;
     height: 100vh;
@@ -33,7 +33,9 @@ div.preloader-window-content {
 
 div.preloader-window-info {
     margin-top: 12px;
-    transition: 0.3s opacity ease-out, 0.3s transform ease-out;
+    transition:
+        0.3s opacity ease-out,
+        0.3s transform ease-out;
 }
 
 div.preloader-window-info-hidden {

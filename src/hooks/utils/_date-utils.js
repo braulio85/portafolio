@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author Braulio Echeverría
  * @date 2025-05-10
  */
 
@@ -20,8 +20,10 @@ export const _dateUtils = {
      */
     isSameDay: (date) => {
         const currentDate = new Date()
-        return date.getDate() === currentDate.getDate() &&
+        return (
+            date.getDate() === currentDate.getDate() &&
             date.getMonth() === currentDate.getMonth() &&
             date.getFullYear() === currentDate.getFullYear()
-    }
+        )
+    },
 }

@@ -12,18 +12,6 @@
                 "title_short_nav": "Contacto",
                 "title_long_prefix": "No dudes en",
                 "title_long": "{{Contácta}}me"
-            },
-            "fr": {
-                "title_short": "Contact",
-                "title_short_nav": "Contact",
-                "title_long_prefix": "N'hésitez pas à",
-                "title_long": "Me {{Contacter}}"
-            },
-            "ko": {
-                "title_short": "연락처",
-                "title_short_nav": "연락처",
-                "title_long_prefix": "주저하지 말고",
-                "title_long": "{{연락}} 주세요"
             }
         }
     },
@@ -33,9 +21,11 @@
             "id": 1,
             "component": "ArticleContactForm",
             "settings": {
-                "email_js_public_key": "tzObcsmOwHvPy6Rhp",
-                "email_js_service_id": "service_4h8g7vb",
-                "email_js_template_id": "template_react"
+                "email_js_public_key": "nvsESf57sAVboleOB",
+                "email_js_service_id": "service_wfaxn9e",
+                "email_js_template_id": "template_gwtapl3",
+                "recipient_email": "braulioecheverria@kinal.org.gt",
+                "turnstile_site_key": "0x4AAAAAACJ3tL6DspaExsT7"
             },
             "locales": {
                 "en": {
@@ -49,18 +39,6 @@
                     "contact_thank_you_body": "Tu mensaje ha sido recibido, y me pondré en contacto contigo pronto. Aprecio tu tiempo y espero conectarme contigo.",
                     "contact_thank_you_footer": "La respuesta se enviará a tu dirección de correo electrónico: {{$email}}",
                     "title": "Envíame un {{mensaje}}"
-                },
-                "fr": {
-                    "contact_thank_you_title": "{{Merci}} pour le contact!",
-                    "contact_thank_you_body": "Votre message a été reçu, et je vous contacterai bientôt. J'apprécie votre temps et j'ai hâte de me connecter avec vous!",
-                    "contact_thank_you_footer": "La réponse sera envoyée à votre adresse e-mail: {{$email}}",
-                    "title": "Envoyez-moi un {{message}}"
-                },
-                "ko": {
-                    "contact_thank_you_title": "{{감사합니다}}!",
-                    "contact_thank_you_body": "귀하의 메시지를 받았으며 곧 연락드리겠습니다. 귀하의 시간에 감사드리며 연결되기를 기대합니다!",
-                    "contact_thank_you_footer": "답변은 귀하의 이메일 주소 {{$email}}로 전송됩니다.",
-                    "title": "{{메시지를}} 보내주세요"
                 }
             },
             "items": null
@@ -74,84 +52,77 @@
                 "order_items_sort": "asc"
             },
             "locales": {
-                "en": {"title": "Or if you {{prefer}}..."},
-                "es": {"title": "O si {{prefieres}}..."},
-                "fr": {"title": "Ou si vous {{préférez}}..."},
-                "ko": {"title": "또는 {{원하시면}}..."}
+                "en": { "title": "Or if you {{prefer}}..." },
+                "es": { "title": "O si {{prefieres}}..." }
             },
             "items": [
                 {
                     "id": 1,
-                    "faIcon": "fa-solid fa-phone",
+                    "faIcon": "fa-solid fa-envelope",
                     "faIconColors": { "bg": "", "fill": "" },
-                    "label": "+1 (123) 456-7890",
-                    "link": {"href": "tel:11234567890", "tooltipString": "call_me"},
+                    "label": "braulioecheverria@kinal.org.gt",
+                    "link": {
+                        "href": "mailto:braulioecheverria@kinal.org.gt",
+                        "tooltipString": "email_me"
+                    },
                     "copyToClipboardButton": true,
                     "locales": {
-                        "en": {"title": "Phone"},
-                        "es": {"title": "Teléfono"},
-                        "fr": {"title": "Téléphone"},
-                        "ko": {"title": "전화"}
+                        "en": { "title": "E-mail" },
+                        "es": { "title": "Correo" }
                     }
                 },
                 {
-                    "id":2,
-                    "faIcon": "fa-solid fa-envelope",
+                    "id": 2,
+                    "faIcon": "fa-brands fa-linkedin",
                     "faIconColors": { "bg": "", "fill": "" },
-                    "label": "mark.choi@email.com",
-                    "link": {"href": "mailto:mark.choi@email.com", "tooltipString": "email_me"},
-                    "copyToClipboardButton": true,
+                    "label": "@josebraulioe",
+                    "link": {
+                        "href": "https://www.linkedin.com/in/josebraulioe/",
+                        "tooltipString": "open_website"
+                    },
+                    "copyToClipboardButton": false,
                     "locales": {
-                        "en": {"title": "E-mail"},
-                        "ko": {"title": "이메일"}
+                        "en": { "title": "LinkedIn" },
+                        "es": { "title": "LinkedIn" }
                     }
                 },
                 {
                     "id": 3,
-                    "faIcon": "fa-brands fa-linkedin",
+                    "faIcon": "fa-brands fa-github",
                     "faIconColors": { "bg": "", "fill": "" },
-                    "label": "@markchoi",
-                    "link": {"href": "https://linkedin.com/in/", "tooltipString": "open_website"},
+                    "label": "@Jbraulio85",
+                    "link": {
+                        "href": "https://github.com/Jbraulio85",
+                        "tooltipString": "open_website"
+                    },
                     "copyToClipboardButton": false,
                     "locales": {
-                        "en": {"title": "LinkedIn"},
-                        "ko": {"title": "링크드인"}
+                        "en": { "title": "GitHub" },
+                        "es": { "title": "GitHub" }
                     }
                 },
                 {
                     "id": 4,
-                    "faIcon": "fa-brands fa-facebook",
+                    "faIcon": "fa-solid fa-globe",
                     "faIconColors": { "bg": "", "fill": "" },
-                    "label": "Mark Choi",
-                    "link": {"href": "https://facebook.com/profiles/mark.choi.855/default", "tooltipString": "open_website"},
+                    "label": "shucode.lat",
+                    "link": { "href": "https://shucode.lat/", "tooltipString": "open_website" },
                     "copyToClipboardButton": false,
                     "locales": {
-                        "en": {"title": "Facebook"},
-                        "ko": {"title": "페이스북"}
+                        "en": { "title": "Website" },
+                        "es": { "title": "Sitio Web" }
                     }
                 },
                 {
                     "id": 5,
-                    "faIcon": "fa-brands fa-instagram",
+                    "faIcon": "fa-solid fa-location-dot",
                     "faIconColors": { "bg": "", "fill": "" },
-                    "label": "@codingmark",
-                    "link": {"href": "https://instagram.com/", "tooltipString": "open_website"},
+                    "label": "Guatemala",
+                    "link": { "href": "", "tooltipString": "" },
                     "copyToClipboardButton": false,
                     "locales": {
-                        "en": {"title": "Instagram"},
-                        "ko": {"title": "인스타그램"}
-                    }
-                },
-                {
-                    "id": 6,
-                    "faIcon": "fa-brands fa-tiktok",
-                    "faIconColors": { "bg": "", "fill": "" },
-                    "label": "@markchoi",
-                    "link": {"href": "https://tiktok.com/@markchoi", "tooltipString": "open_website"},
-                    "copyToClipboardButton": false,
-                    "locales": {
-                        "en": { "title": "TikTok" },
-                        "ko": { "title": "틱톡" }
+                        "en": { "title": "Location" },
+                        "es": { "title": "Ubicación" }
                     }
                 }
             ]

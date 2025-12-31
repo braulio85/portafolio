@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running ESLint..."
+pnpm lint:fix
+
+echo "Running Prettier..."
+pnpm format
+
+echo "Staging formatted files..."
+git add -A
+

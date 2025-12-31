@@ -1,0 +1,3 @@
+BASE_DESIGN_CREDIT=Based on the portfolio template design by Ryan Balieiro
+CUSTOMIZED_BY=Braulio Echeverría
+PROJECT=Braulio Echeverría's Portfolio

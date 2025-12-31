@@ -1,6 +1,7 @@
 # <img src="../assets/logo.png"> Tutorial 21 – Deploying for production
 
 ## 1. Vite configuration
+
 Open `vite.config.js` and set the base directory for your application. This setting defines the main path that your website will be hosted under.
 
 ```js
@@ -15,11 +16,12 @@ In simple terms, if you consider GitHub hosting the GitHub Pages site for this r
 If you're deploying to Netlify or your own custom domain where your website is located at the root, you can leave the `base` setting as `'/'`.
 
 ## 2. Building for production
+
 To compile your project for production, execute:
 
 ```
 npm run build
-``` 
+```
 
 This command triggers a series of processes that package your code, assets, and other necessary files, ultimately creating a production-ready version of your project. After running the command, you'll find the compiled files within the `dist` folder.
 
@@ -35,7 +37,7 @@ Follow these steps to deploy your portfolio to GitHub Pages:
     - Go to `Your Repo > Settings > Actions > General`.
     - Under **Actions permissions**, select **"Allow all actions and reusable workflows"**.
     - Scroll down to **Workflow permissions** and enable **"Read and write permissions"**.  
-      ⚠️ *If this step is skipped, the deployment script will fail after the build stage.*
+      ⚠️ _If this step is skipped, the deployment script will fail after the build stage._
 - Once everything is configured, **push a commit** to your repository to trigger the deployment script automatically.
 - If the deployment doesn't start automatically:
     - Go to the **Actions** tab in your GitHub repo.
@@ -53,8 +55,9 @@ Follow these steps to deploy your portfolio to GitHub Pages:
   You should then see the deployment status and a link to your live portfolio in the **"Deployments"** section on the right side of your repository homepage.
 
 ## Next Steps
+
 Ready to keep going? Check out the next bonus tutorial or revisit the previous one if you need a refresher:
 
 ⬅️ [Previous: ArticleContactForm](./TUTORIAL_20_CATEGORIZING_ARTICLE_ITEMS.md)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Next: Bonus - Creating Your Own Custom Article](./TUTORIAL_22_BONUS_CREATING_YOUR_OWN_CUSTOM_ARTICLE.md) ➡️ 
+[Next: Bonus - Creating Your Own Custom Article](./TUTORIAL_22_BONUS_CREATING_YOUR_OWN_CUSTOM_ARTICLE.md) ➡️

@@ -20,12 +20,14 @@ npm run resume:make:article ArticleAccordion
 ```
 
 After running this command, you will find two files created in the `src/components/articles` folder:
+
 - `ArticleAccordion.jsx` ➔ This is the main component file where we will define the structure and logic of our accordion article.
 - `ArticleAccordion.scss` ➔ This file will contain the styles specific to our accordion article.
 
 ## 3. Implementing the components
 
 Open the `ArticleAccordion.jsx` file. You will notice the file contains three components:
+
 - `ArticleAccordion()` ➔ This is the main component that wraps the entire article.
 - `ArticleAccordionItems()` ➔ This component is a container for the article's items.
 - `ArticleAccordionItem()` ➔ This component represents each individual item.
@@ -37,7 +39,7 @@ Let's implement these components step by step.
 First thing we're going to do is import Bootstrap's default accordion component on the `ArticleAccordion.jsx` file. This will allow us to leverage Bootstrap's built-in functionality for creating accordions:
 
 ```javascript
-import {Accordion, AccordionItem} from "react-bootstrap"
+import { Accordion, AccordionItem } from 'react-bootstrap'
 ```
 
 ### Implementing the first component: `ArticleAccordion`
@@ -49,14 +51,18 @@ function ArticleAccordion({ dataWrapper, id }) {
     const [selectedItemCategoryId, setSelectedItemCategoryId] = useState(null)
 
     return (
-        <Article id={id}
-                 type={Article.Types.SPACING_DEFAULT}
-                 dataWrapper={dataWrapper}
-                 className={`article-accordion`}
-                 selectedItemCategoryId={selectedItemCategoryId}
-                 setSelectedItemCategoryId={setSelectedItemCategoryId}>
-            <ArticleAccordionItems dataWrapper={dataWrapper} 
-                                   selectedItemCategoryId={selectedItemCategoryId}/>
+        <Article
+            id={id}
+            type={Article.Types.SPACING_DEFAULT}
+            dataWrapper={dataWrapper}
+            className={`article-accordion`}
+            selectedItemCategoryId={selectedItemCategoryId}
+            setSelectedItemCategoryId={setSelectedItemCategoryId}
+        >
+            <ArticleAccordionItems
+                dataWrapper={dataWrapper}
+                selectedItemCategoryId={selectedItemCategoryId}
+            />
         </Article>
     )
 }
@@ -70,16 +76,12 @@ In this second component, we’ll create the Bootstrap accordion and wrap the it
 function ArticleAccordionItems({ dataWrapper, selectedItemCategoryId }) {
     const filteredItems = dataWrapper.getOrderedItemsFilteredBy(selectedItemCategoryId)
 
-    const defaultActiveKey = filteredItems.length ?
-        filteredItems[0].uniqueId :
-        null
+    const defaultActiveKey = filteredItems.length ? filteredItems[0].uniqueId : null
 
     return (
-        <Accordion className={`article-accordion-items`}
-                   defaultActiveKey={defaultActiveKey}>
+        <Accordion className={`article-accordion-items`} defaultActiveKey={defaultActiveKey}>
             {filteredItems.map((itemWrapper, key) => (
-                <ArticleAccordionItem itemWrapper={itemWrapper} 
-                                      key={key}/>
+                <ArticleAccordionItem itemWrapper={itemWrapper} key={key} />
             ))}
         </Accordion>
     )
@@ -95,22 +97,25 @@ Finally, we’ll implement the `ArticleAccordionItem` component. This component 
 ```jsx
 function ArticleAccordionItem({ itemWrapper }) {
     return (
-        <AccordionItem className={`article-accordion-item`}
-                       eventKey={itemWrapper.uniqueId}>
+        <AccordionItem className={`article-accordion-item`} eventKey={itemWrapper.uniqueId}>
             <Accordion.Header>
-                <div className={`eq-h6`}
-                     dangerouslySetInnerHTML={{__html: itemWrapper.locales.title}}/>
+                <div
+                    className={`eq-h6`}
+                    dangerouslySetInnerHTML={{ __html: itemWrapper.locales.title }}
+                />
             </Accordion.Header>
             <Accordion.Body>
-                <div className={`text-3`}
-                     dangerouslySetInnerHTML={{__html: itemWrapper.locales.text}}/>
+                <div
+                    className={`text-3`}
+                    dangerouslySetInnerHTML={{ __html: itemWrapper.locales.text }}
+                />
             </Accordion.Body>
         </AccordionItem>
-    );
+    )
 }
 ```
 
-Here, we're using the default locales properties `title` and `text`. If you want to add your own custom fields, you need to make sure they are defined and parsed in the `src/hooks/models/ArticleItemDataWrapper` model. 
+Here, we're using the default locales properties `title` and `text`. If you want to add your own custom fields, you need to make sure they are defined and parsed in the `src/hooks/models/ArticleItemDataWrapper` model.
 
 If you want to add CSS styles to your component, you can also open `ArticleAccordion.scss` and add your custom styles there.
 
@@ -123,7 +128,7 @@ Now that we have implemented the `ArticleAccordion` component, we can use it in 
     "id": 1,
     "component": "ArticleAccordion",
     "locales": {
-        "en": {"title": "My {{Accordion}}"}
+        "en": { "title": "My {{Accordion}}" }
     },
     "settings": {
         "order_items_by": "id",

@@ -18,7 +18,7 @@ Here's a basic example of a section containing two articles: a skills list and a
             "settings": {},
             "items": []
         },
-    
+
         {
             "id": 2,
             "component": "ArticleTestimonials",
@@ -38,13 +38,13 @@ Here's a basic example of a section containing two articles: a skills list and a
 
 Each article object contains the following properties:
 
-| Property    | Type      | Description                                                                                             |
-|-------------|-----------|---------------------------------------------------------------------------------------------------------|
-| `id`        | NUMBER    | A unique identifier for the article (within the section).                                               |
-| `component` | STRING    | The name of the JSX component that will render the article (e.g. `ArticleSkills`).                      |
-| `locales`   | OBJECT    | This can be used to **localize the article title** and other parameters we're going to explore further. |
-| `settings`  | OBJECT    | A list of flags and configurations for the article.                                                     |
-| `items`     | ARRAY     | The list of items within the article.                                                                   |
+| Property    | Type   | Description                                                                                             |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------- |
+| `id`        | NUMBER | A unique identifier for the article (within the section).                                               |
+| `component` | STRING | The name of the JSX component that will render the article (e.g. `ArticleSkills`).                      |
+| `locales`   | OBJECT | This can be used to **localize the article title** and other parameters we're going to explore further. |
+| `settings`  | OBJECT | A list of flags and configurations for the article.                                                     |
+| `items`     | ARRAY  | The list of items within the article.                                                                   |
 
 Don't stress about the `settings` and `items` field at the moment — these fields are specific to each article, and we will have tutorial steps where we will discuss the structure of these items for each article type.
 
@@ -53,7 +53,7 @@ Don't stress about the `settings` and `items` field at the moment — these fiel
 The `component` field can be one of the following:
 
 | Component Name        | Description                                                                         |
-|-----------------------|-------------------------------------------------------------------------------------|
+| --------------------- | ----------------------------------------------------------------------------------- |
 | `ArticleCards`        | Renders a slider with informational cards – perfect for things like certifications. |
 | `ArticleContactForm`  | Renders a contact form that allows users to send emails to you.                     |
 | `ArticleFacts`        | Renders fun fact widgets with icons, values, and descriptions.                      |
@@ -70,8 +70,9 @@ The `component` field can be one of the following:
 In the next tutorial steps, we're going to learn how to configure each of these articles.
 
 ## Next Steps
+
 Ready to keep going? Check out the next tutorial or revisit the previous one if you need a refresher:
 
 ⬅️ [Previous: Section Titles](./TUTORIAL_06_SECTION_TITLES.md)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Next: ArticleInlineList](./TUTORIAL_08_ARTICLE_INLINE_LIST.md) ➡️ 
+[Next: ArticleInlineList](./TUTORIAL_08_ARTICLE_INLINE_LIST.md) ➡️

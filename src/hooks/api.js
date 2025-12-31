@@ -1,23 +1,14 @@
-/**
- * @author Ryan Balieiro
- * @date 2025-05-10
- * @description This hook provides methods to interact with external APIs.
- */
-
-import emailjs from "@emailjs/browser"
-import {useConstants} from "/src/hooks/constants.js"
-import {useUtils} from "/src/hooks/utils.js"
-
-const constants = useConstants()
-const utils = useUtils()
+import emailjs from '@emailjs/browser'
+import { Constants } from '/src/hooks/constants.js'
+import { Utils } from '/src/hooks/utils.js'
 
 export const useApi = () => {
     return {
         validators,
         handlers,
-        analytics
+        analytics,
     }
-}
+};
 
 const validators = {
     /**
@@ -28,15 +19,25 @@ const validators = {
      */
     validateEmailRequest: (name, email, subject, message) => {
         const minWordCountForMessage = 3
-
         const validations = [
-            { errorCode: constants.ErrorCodes.VALIDATION_EMPTY_FIELDS,      errorCondition: !name || !email || !subject || !message },
-            { errorCode: constants.ErrorCodes.VALIDATION_EMAIL,             errorCondition: !utils.validation.validateEmail(email) },
-            { errorCode: constants.ErrorCodes.VALIDATION_MESSAGE_LENGTH,    errorCondition: !utils.validation.isLongerThan(message, minWordCountForMessage),    messageParameter: minWordCountForMessage + 1},
-            { errorCode: constants.ErrorCodes.VALIDATION_MESSAGE_SPAM,      errorCondition: utils.validation.isSpam(message) },
-        ]
-
-        const error = validations.find(validation => validation.errorCondition)
+            {
+                errorCode: Constants.ErrorCodes.VALIDATION_EMPTY_FIELDS,
+                errorCondition: !name || !email || !subject || !message,
+            },
+            {
+                errorCode: Constants.ErrorCodes.VALIDATION_EMAIL,
+                errorCondition: !Utils.validation.validateEmail(email),
+            },
+            {
+                errorCode: Constants.ErrorCodes.VALIDATION_MESSAGE_LENGTH,
+                errorCondition: !Utils.validation.isLongerThan(message, minWordCountForMessage),
+            },
+            {
+                errorCode: Constants.ErrorCodes.VALIDATION_MESSAGE_SPAM,
+                errorCondition: Utils.validation.isSpam(message),
+            },
+        ];
+        const error = validations.find((validation) => validation.errorCondition);
         return {
             success: !error,
             errorCode: error?.errorCode,
@@ -48,23 +49,22 @@ const validators = {
                 from_email: email,
                 custom_subject: subject,
                 message: message,
-                custom_source: utils.url.getAbsoluteLocation(),
-                custom_source_name: "React Portfolio"
-            }
-        }
-    }
+                custom_source: Utils.url.getAbsoluteLocation(),
+                custom_source_name: 'React Portfolio',
+            },
+        };
+    },
 }
 
 const handlers = {
     /**
-     * @return {Promise<{success: (*|boolean)}>}
+     * @return {Promise<{success: (*|boolean)}>} 
      */
     dummyRequest: async () => {
         await new Promise((resolve) => setTimeout(resolve, 700))
         window._dummyRequestSuccess = !window._dummyRequestSuccess
-
         return {
-            success: window._dummyRequestSuccess
+            success: window._dummyRequestSuccess,
         }
     },
 
@@ -73,22 +73,40 @@ const handlers = {
      * @param {String} publicKey
      * @param {String} serviceId
      * @param {String} templateId
-     * @return {Promise<{success: boolean}>}
+     * @return {Promise<{success: boolean, rateLimited?: boolean}>}
      */
     sendEmailRequest: async (validationBundle, publicKey, serviceId, templateId) => {
+        // Rate limiting: 3 emails per hour
+        const RATE_LIMIT_KEY = 'email_rate_limit'
+        const MAX_EMAILS = 3
+        const TIME_WINDOW = 60 * 60 * 1000 // 1 hour in milliseconds
+
+        const now = Date.now()
+        const rateLimitData = JSON.parse(localStorage.getItem(RATE_LIMIT_KEY) || '{"timestamps":[]}')
+        const recentTimestamps = rateLimitData.timestamps.filter(ts => now - ts < TIME_WINDOW)
+        if (recentTimestamps.length >= MAX_EMAILS) {
+            const oldestTimestamp = Math.min(...recentTimestamps)
+            const timeUntilReset = Math.ceil((TIME_WINDOW - (now - oldestTimestamp)) / 60000) // minutes
+            return { 
+                success: false, 
+                rateLimited: true,
+                timeUntilReset 
+            }
+        }
         emailjs.init(publicKey)
-
-        const response = {success: false}
-
+        const response = { success: false }
         try {
             const result = await emailjs.send(serviceId, templateId, validationBundle)
             response.success = result.status === 200
+            if (response.success) {
+                recentTimestamps.push(now)
+                localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify({ timestamps: recentTimestamps }))
+            }
         } catch (error) {
             response.success = false
         }
-
         return response
-    }
+    },
 }
 
 const analytics = {
@@ -97,16 +115,16 @@ const analytics = {
      * Here, you can integrate Google Analytics, Mixpanel, or your own custom analytics implementation.
      * @returns {Promise<void>}
      */
-    reportVisit: async() => {
-        await fetch("https://admin.ryanbalieiro.com/api/analytics/mock", {
+    reportVisit: async () => {
+        await fetch('https://admin.ryanbalieiro.com/api/analytics/mock', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 params: {
-                    url: utils.url.getRootLocation(),
-                    template_id: "react-portfolio"
-                }
-            })
+                    url: Utils.url.getRootLocation(),
+                    template_id: 'react-portfolio',
+                },
+            }),
         })
-    }
+    },
 }

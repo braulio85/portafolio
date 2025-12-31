@@ -1,19 +1,16 @@
 /**
- * @author Ryan Balieiro
+ * @author Braulio Echeverría
  * @date 2025-05-10
  */
 
-import {useConstants} from "/src/hooks/constants.js"
-
-const constants = useConstants()
-
+import { Constants } from '/src/hooks/constants.js'
 export const _domUtils = {
     /**
      * @return {boolean}
      **/
     didLoadImagesWithQuerySelector: (querySelector) => {
         const images = document.querySelectorAll(querySelector || 'img')
-        return Array.from(images).every(img => img.complete && img.naturalHeight !== 0)
+        return Array.from(images).every((img) => img.complete && img.naturalHeight !== 0)
     },
 
     /**
@@ -33,16 +30,18 @@ export const _domUtils = {
         const imageElements = document.querySelectorAll(`.${imageClass}`)
         const imageLoadProgress = { loaded: 0, total: 0 }
 
-        Array.from(imageElements).map(item => {
+        Array.from(imageElements).map((item) => {
             imageLoadProgress.total++
-            if(item.classList.contains(imageClass + "-loaded") || item.classList.contains(imageClass + "-error"))
+            if (
+                item.classList.contains(imageClass + '-loaded') ||
+                item.classList.contains(imageClass + '-error')
+            )
                 imageLoadProgress.loaded++
         })
 
-        if(imageLoadProgress.total === 0)
-            return 100
+        if (imageLoadProgress.total === 0) return 100
 
-        const percentage = Math.round(100*imageLoadProgress.loaded/imageLoadProgress.total)
+        const percentage = Math.round((100 * imageLoadProgress.loaded) / imageLoadProgress.total)
         return Math.max(0, Math.min(100, percentage))
     },
 
@@ -71,20 +70,15 @@ export const _domUtils = {
         if (!element) return false
 
         const rect = element.getBoundingClientRect()
-        return (
-            x >= rect.left &&
-            x <= rect.right &&
-            y >= rect.top &&
-            y <= rect.bottom
-        )
+        return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom
     },
 
     /**
      * @param {Boolean} enabled
      */
     setBodyScrollEnabled: (enabled) => {
-        if(window.__scrollEnabled === undefined) window.__scrollEnabled = true
-        if(enabled) _domUtils._enableScroll()
+        if (window.__scrollEnabled === undefined) window.__scrollEnabled = true
+        if (enabled) _domUtils._enableScroll()
         else _domUtils._disableScroll()
     },
 
@@ -92,7 +86,7 @@ export const _domUtils = {
      * @private
      */
     _enableScroll: () => {
-        if(window.__scrollEnabled) return
+        if (window.__scrollEnabled) return
 
         const bodyStyle = document.body.style
         bodyStyle.position = window.__savedBodyStyle.position
@@ -110,7 +104,7 @@ export const _domUtils = {
      * @private
      */
     _disableScroll: () => {
-        if(!window.__scrollEnabled) return
+        if (!window.__scrollEnabled) return
 
         const bodyStyle = document.body.style
 
@@ -131,5 +125,5 @@ export const _domUtils = {
         bodyStyle.overflow = 'hidden'
 
         window.__scrollEnabled = false
-    }
+    },
 }

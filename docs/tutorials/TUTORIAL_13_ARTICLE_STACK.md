@@ -15,7 +15,7 @@ Just copy and paste this into a section's `articles` array and see the magic hap
     "id": 1,
     "component": "ArticleStack",
     "locales": {
-        "en": {"title": "{{Backend}} Stack"}
+        "en": { "title": "{{Backend}} Stack" }
     },
     "settings": {
         "order_items_by": "id",
@@ -26,8 +26,8 @@ Just copy and paste this into a section's `articles` array and see the magic hap
             "id": 1,
             "img": "",
             "faIcon": "fa-brands fa-node-js",
-            "faIconColors": {"bg": "", "bgLight": "", "fill": "#339933", "fillLight": ""},
-            "date": {"year": null, "month": null},
+            "faIconColors": { "bg": "", "bgLight": "", "fill": "#339933", "fillLight": "" },
+            "date": { "year": null, "month": null },
             "locales": {
                 "en": {
                     "title": "Node.js"
@@ -39,8 +39,8 @@ Just copy and paste this into a section's `articles` array and see the magic hap
             "id": 2,
             "img": "",
             "faIcon": "fa-brands fa-java",
-            "faIconColors": {"bg": "", "bgLight": "", "fill": "#0295c2", "fillLight": "#007396"},
-            "date": {"year": null, "month": null},
+            "faIconColors": { "bg": "", "bgLight": "", "fill": "#0295c2", "fillLight": "#007396" },
+            "date": { "year": null, "month": null },
             "locales": {
                 "en": {
                     "title": "Java"
@@ -52,8 +52,8 @@ Just copy and paste this into a section's `articles` array and see the magic hap
             "id": 3,
             "img": "",
             "faIcon": "fa-solid fa-gem",
-            "faIconColors": {"bg": "", "bgLight": "", "fill": "#CC0000", "fillLight": ""},
-            "date": {"year": null, "month": null},
+            "faIconColors": { "bg": "", "bgLight": "", "fill": "#CC0000", "fillLight": "" },
+            "date": { "year": null, "month": null },
             "locales": {
                 "en": {
                     "title": "Ruby on Rails"
@@ -66,23 +66,24 @@ Just copy and paste this into a section's `articles` array and see the magic hap
 
 ### Required Settings
 
-| Property                                 | Type    | Description                                                                           |
-|------------------------------------------|---------|---------------------------------------------------------------------------------------|
-| `order_items_by`                         | STRING  | Defines the item key that will be used for ordering items. Default: `"id"`.           |
-| `order_items_sort`                       | STRING  | Defines the direction of the order. Use `"asc"` (ascending) or `"desc"` (descending). |
+| Property           | Type   | Description                                                                           |
+| ------------------ | ------ | ------------------------------------------------------------------------------------- |
+| `order_items_by`   | STRING | Defines the item key that will be used for ordering items. Default: `"id"`.           |
+| `order_items_sort` | STRING | Defines the direction of the order. Use `"asc"` (ascending) or `"desc"` (descending). |
 
 ## Item Structure
 
 Each item of the `ArticleStack` article represents a single technology.
 
 ### Empty Item Model
+
 ```json
 {
     "id": 0,
     "img": "",
     "faIcon": "",
-    "faIconColors": {"bg": "", "bgLight": "", "fill": "", "fillLight": ""},
-    "date": {"year": null, "month": null},
+    "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+    "date": { "year": null, "month": null },
     "locales": {
         "en": {
             "title": ""
@@ -94,7 +95,7 @@ Each item of the `ArticleStack` article represents a single technology.
 ### ⚡ Item Static Fields
 
 | Property           | Type               | Required? | Description                                                                                                                                                                                      |
-|--------------------|--------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------ | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `id`               | NUMBER             | REQUIRED  | A unique ID for the item within the article.                                                                                                                                                     |
 | `img`              | STRING (URL)       | OPTIONAL  | Path to the image shown in the avatar. Must be relative to `public/`. If not provided, the article falls back to the `faIcon`.                                                                   |
 | `faIcon`           | STRING             | OPTIONAL  | A [Font Awesome](https://fontawesome.com/search?ic=free) icon used as a fallback if no image is specified (now supporting [PrimeIcons](https://www.primefaces.org/diamond/icons.xhtml) as well!) |
@@ -106,19 +107,21 @@ Each item of the `ArticleStack` article represents a single technology.
 
 ### 🌐 Item Locales Fields
 
-| Property | Type   | Required?   | Description                 |
-|----------|--------|-------------|-----------------------------|
-| `title`  | STRING | REQUIRED    | The name of the technology. |
+| Property | Type   | Required? | Description                 |
+| -------- | ------ | --------- | --------------------------- |
+| `title`  | STRING | REQUIRED  | The name of the technology. |
 
 > **Note:** All fields in the locales object support the following custom formatting:
->- `{{Some text...}}` for highlighting a text.
->- `[[Some text...]]` for making a text bold.
+>
+> - `{{Some text...}}` for highlighting a text.
+> - `[[Some text...]]` for making a text bold.
 >
 > **Note 2:** Required and recommended fields must be present **at least** in the default language.
 
 ## Next Steps
+
 Ready to keep going? Check out the next tutorial or revisit the previous one if you need a refresher:
 
 ⬅️ [Previous: ArticleTimeline](./TUTORIAL_12_ARTICLE_TIMELINE.md)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Next: ArticlePortfolio](./TUTORIAL_14_ARTICLE_PORTFOLIO.md) ➡️ 
+[Next: ArticlePortfolio](./TUTORIAL_14_ARTICLE_PORTFOLIO.md) ➡️

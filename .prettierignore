@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+.git
+.next
+.turbo
+pnpm-lock.yaml
+package-lock.json
+.cache

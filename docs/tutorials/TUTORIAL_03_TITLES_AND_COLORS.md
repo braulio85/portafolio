@@ -10,8 +10,8 @@ Here’s an example:
 <link rel="icon" type="image/svg+xml" href="/images/svg/logo.svg" />
 <title>John Doe's Portfolio</title>
 
-<meta name="description" content="Get to know more about John Doe."/>
-<meta name="keywords" content="john,doe,portfolio,programmer,react"/>
+<meta name="description" content="Get to know more about John Doe." />
+<meta name="keywords" content="john,doe,portfolio,programmer,react" />
 ```
 
 ## Preloader Colors
@@ -20,12 +20,11 @@ If you want to change the colors of the preloading screen, open the `src/styles/
 
 ```scss
 $loader-background: #1b2226; // making the loader background dark blue
-$loader-contrast: #FFFFFF; // text and pacman animation color
+$loader-contrast: #ffffff; // text and pacman animation color
 $primary: #51a0c2; // the base primary color (used to color the pacman beans)
 ```
 
 For a smoother visual transition, you can also match the splash screen background in `index.html` by setting the same background color:
-
 
 ```html
 <body style="background-color: #1b2226">
@@ -34,7 +33,7 @@ For a smoother visual transition, you can also match the splash screen backgroun
 </body>
 ```
 
-The logo shown in the **preloader** is a static svg file located at `public/images/svg/logo.svg`. If you're customizing your theme's color scheme, it's a good idea to use a logo that visually matches your new colors for better consistency and aesthetics. 
+The logo shown in the **preloader** is a static svg file located at `public/images/svg/logo.svg`. If you're customizing your theme's color scheme, it's a good idea to use a logo that visually matches your new colors for better consistency and aesthetics.
 
 If you want to create a **variation of the default template logo** with a different color, you can easily edit and export it as an SVG **for free** [here](https://www.svgrepo.com/svg/411136/code?edit=true).
 
@@ -68,7 +67,7 @@ $base-bg-light: #a6c9e3;
 $base-bg-dark: #7ea6cb;
 
 $texts: #20242a;
-$texts-inverted: #EEE;
+$texts-inverted: #eee;
 
 $base-container-bg: #d9e7f5;
 $base-container-bg-accent: #c2d8e9;
@@ -103,8 +102,9 @@ If you want your app to support a **third theme** (or more), follow these steps:
 Once these steps are complete, your new theme will show up in the theme selector and be fully usable.
 
 ## Next Steps
+
 Ready to keep going? Check out the next tutorial or revisit the previous one if you need a refresher:
 
 ⬅️ [Previous: Configuring settings.json](./TUTORIAL_02_CONFIGURING_SETTINGS_JSON.md)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Next: Profile and Strings](./TUTORIAL_04_PROFILE_AND_STRINGS.md) ➡️ 
+[Next: Profile and Strings](./TUTORIAL_04_PROFILE_AND_STRINGS.md) ➡️

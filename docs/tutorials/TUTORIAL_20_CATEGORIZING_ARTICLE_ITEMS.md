@@ -26,13 +26,12 @@ Here's an example configuration of an article with a category filter:
         "order_items_by": "id",
         "order_items_sort": "asc"
     },
-    "items": [
-        
-    ]
+    "items": []
 }
 ```
 
 Key points you might want to note:
+
 - Each category label should be defined in the article `locales` object, using the pattern `category_{id}`.
 - You can create as many categories as you need, but the `category_all` field is required to allow users to view all items at once.
 - Add a `categorize_by` array in the `settings` object to list all available categories that should appear in the filter. No need to define the `category_all` category here, as it is automatically included.
@@ -63,8 +62,9 @@ To assign an item to a category, add a `categoryId` field under it:
 Once set up, users will be able to filter your article items by category using the generated filter buttons.
 
 ## Next Steps
+
 Ready to keep going? Check out the next tutorial or revisit the previous one if you need a refresher:
 
 ⬅️ [Previous: ArticleContactForm](./TUTORIAL_19_ARTICLE_CONTACT_FORM.md)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Next: Deploying for Production](./TUTORIAL_21_DEPLOYING_FOR_PRODUCTION.md) ➡️ 
+[Next: Deploying for Production](./TUTORIAL_21_DEPLOYING_FOR_PRODUCTION.md) ➡️
