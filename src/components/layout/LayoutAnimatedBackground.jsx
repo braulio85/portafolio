@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { useUtils } from '/src/hooks/utils.js'
 import Animable from '/src/components/capabilities/Animable.jsx'
 
-const utils = useUtils()
-
 function LayoutAnimatedBackground() {
     const utils = useUtils()
 

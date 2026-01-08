@@ -242,7 +242,7 @@ function PreloaderWindowInfo({ title, subtitle, logoOffset, hidden, setDidLoadLo
     }
 
     const developerStyle = {
-        marginTop: `${offsetBottom}px`,
+        marginTop: `${Math.max(offsetBottom, 24)}px`,
     }
 
     useEffect(() => {

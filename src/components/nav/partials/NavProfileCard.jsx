@@ -78,7 +78,7 @@ function NavProfileCard({ profile, expanded }) {
             )}
 
             <div className={`nav-profile-card-info`}>
-                <h1 className={`nav-profile-card-name ${navProfileCardNameClass}`}>
+                <h2 className={`nav-profile-card-name ${navProfileCardNameClass}`}>
                     <span dangerouslySetInnerHTML={sanitizer.sanitizeForReact(stylizedName)} />
                     {namePronunciationButtonVisible && (
                         <AudioButton
@@ -87,7 +87,7 @@ function NavProfileCard({ profile, expanded }) {
                             size={AudioButton.Sizes.DYNAMIC_FOR_NAV_TITLE}
                         />
                     )}
-                </h1>
+                </h2>
 
                 {roles?.length > 1 && (
                     <TextTyper

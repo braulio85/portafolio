@@ -2,34 +2,34 @@
     "categories": [
         {
             "id": "home",
-            "faIcon": "fa-regular fa-user",
+            "faIcon": "fa-solid fa-address-card",
             "locales": {
-                "en": { "title": "Home" },
-                "es": { "title": "Inicio" }
+                "en": { "title": "About me" },
+                "es": { "title": "Sobre mí" }
             }
         },
         {
             "id": "background",
-            "faIcon": "fa-regular fa-clock",
+            "faIcon": "fa-solid fa-graduation-cap",
             "locales": {
-                "en": { "title": "History" },
-                "es": { "title": "Trayectoria" }
+                "en": { "title": "Education" },
+                "es": { "title": "Educación" }
             }
         },
         {
             "id": "showcase",
-            "faIcon": "fa-regular fa-folder-open",
+            "faIcon": "fa-solid fa-tools",
             "locales": {
-                "en": { "title": "Showcase" },
-                "es": { "title": "Vitrina" }
+                "en": { "title": "Skills" },
+                "es": { "title": "Habilidades" }
             }
         },
         {
             "id": "more",
-            "faIcon": "fa-regular fa-object-ungroup",
+            "faIcon": "fa-solid fa-pen-to-square",
             "locales": {
-                "en": { "title": "More" },
-                "es": { "title": "Más" }
+                "en": { "title": "Contact" },
+                "es": { "title": "Contacto" }
             }
         }
     ]

@@ -48,9 +48,13 @@ div.preloader-window-info-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
 }
 
 div.preloader-window-info-developer {
-    opacity: 0.5;
+    margin-top: 24px;
     text-align: center;
+    color: #b71c1c;
+    opacity: 1;
+    line-height: 1.4;
 }

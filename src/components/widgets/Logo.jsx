@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import './Logo.scss'
-import React, { useEffect, useState } from 'react'
 import { Utils } from '/src/hooks/utils.js'
 
 
@@ -14,7 +14,7 @@ function Logo({ className = '', style = {}, size, setDidLoad }) {
     return (
         <div className={`logo-wrapper ${sizeClass} ${className}`} style={style}>
             <img
-                src={utils.file.resolvePath(`/images/svg/logo.svg`)}
+                src={utils.file.resolvePath(`/images/pictures/miniatura.webp`)}
                 onLoad={() => {
                     setDidLoad && setDidLoad(true)
                 }}

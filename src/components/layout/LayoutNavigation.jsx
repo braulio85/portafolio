@@ -33,7 +33,7 @@ function LayoutNavigation({ children, profile = null, sectionLinks = [], categor
 
             <div className={`layout-navigation-children-wrapper ${offsetClass}`}>{children}</div>
 
-            {isMobileLayout && <NavTabController links={categoryLinks} />}
+            {isMobileLayout && <NavTabController links={sectionLinks} />}
         </div>
     )
 }

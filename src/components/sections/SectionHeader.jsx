@@ -12,6 +12,7 @@ function SectionHeader({ section }) {
     const isMobileLayout = viewport.isMobileLayout()
     const parsedTitle = parser.parseSectionTitle(section)
 
+    const HeadingTag = section?.id === 'about' ? 'h1' : 'h2'
     const titleClass = !isMobileLayout ? `lead-4` : ``
 
     return (
@@ -23,7 +24,7 @@ function SectionHeader({ section }) {
                 </div>
             )}
 
-            <h2
+            <HeadingTag
                 className={`section-header-title ${titleClass} h3`}
                 dangerouslySetInnerHTML={sanitizer.sanitizeForReact(parsedTitle.title)}
             />

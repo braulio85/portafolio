@@ -5,13 +5,13 @@
                 "title_short": "Welcome!",
                 "title_short_nav": "About me",
                 "title_long_prefix": "Hello...",
-                "title_long": "I'm {{Braulio Echeverría!}}"
+                "title_long": "I'm {{Braulio Echeverría}}, fullstack developer in Guatemala"
             },
             "es": {
                 "title_short": "¡Hola!",
                 "title_short_nav": "Sobre mí",
                 "title_long_prefix": "Hola...",
-                "title_long": "Soy {{Braulio Echeverría!}}"
+                "title_long": "Soy {{Braulio Echeverría}}, desarrollador fullstack en Guatemala"
             }
         }
     },
@@ -68,7 +68,7 @@
             "items": [
                 {
                     "id": 1,
-                    "img": "images/pictures/about-texts-image-1.png",
+                    "img": "images/pictures/about-texts-image-1.webp",
                     "faIcon": "",
                     "faIconColors": { "bg": "", "fill": "" },
                     "locales": {
@@ -76,7 +76,50 @@
                             "text": "<p>I’m Braulio, a {{fullstack developer}} from Guatemala. I build modern web apps, wire backend/frontend together, and lately I’ve been integrating LLM/STT/TTS to automate workflows for Fundación Kinal and clients.</p><p>I co-founded ShuCode GT to craft polished UIs, and I teach programming to keep teams growing with solid fundamentals: Git, clean code, OOP, and agile habits.</p><p>If you need someone who can ship, teach, and iterate fast, let’s build something great [[together!]]</p>"
                         },
                         "es": {
-                            "text": "<p>Soy Braulio, un {{desarrollador fullstack}} de Guatemala. Construyo apps web modernas, conecto backend y frontend, y últimamente integro LLM/STT/TTS para automatizar flujos en Fundación Kinal y con clientes.</p><p>Cofundé ShuCode GT para crear UIs cuidadas, y doy clases de programación para que los equipos crezcan con bases sólidas: Git, clean code, POO y hábitos ágiles.</p><p>Si buscas alguien que entregue, enseñe e itere rápido, hagamos algo grande [[juntos!]]</p>"
+                            "text": "<p>Soy Braulio, {{profesor de programación}} y desarrollador fullstack de Guatemala. Durante los últimos años he estado enseñando desarrollo de software en Fundación Kinal, donde diseño mallas curriculares, mentorizo estudiantes en prácticas de clean code y ayudo a construir sus bases en Git, POO y metodologías ágiles.</p><p>Más allá del aula, desarrollo aplicaciones web modernas y recientemente comencé a integrar tecnologías de IA (LLM/STT/TTS) para automatizar flujos de trabajo tanto en proyectos educativos como de clientes. Cofundé ShuCode GT, donde nos enfocamos en entregar interfaces pulidas y soluciones full-stack.</p><p>Si buscas a alguien que pueda enseñar, desarrollar y conectar el aprendizaje con la aplicación real, hagamos algo significativo [[juntos!]]</p>"
+                        }
+                    }
+                }
+            ]
+        },
+
+        {
+            "id": 3,
+            "component": "ArticleText",
+            "locales": {
+                "en": { "title": "Fullstack development & {{technical consulting}}" },
+                "es": { "title": "Desarrollo fullstack y {{consultoría técnica}}" }
+            },
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "img": "",
+                    "faIcon": "fa-solid fa-layer-group",
+                    "faIconColors": { "bg": "", "fill": "" },
+                    "locales": {
+                        "en": {
+                            "text": "<p>I partner with teams to design, build, and launch products end-to-end: discovery, architecture, backlog definition, and iterative delivery. On the frontend I work with React/Vite, accessible UI patterns, and design systems; on the backend I usually ship Node/Fastify or Express, REST/GraphQL APIs, queues, and robust logging/observability. Databases I use most: PostgreSQL, Redis, and Firestore when realtime helps.</p><p>I care about performance budgets, Core Web Vitals, and CI/CD hygiene so releases are predictable. I have deployed to Vercel, Fly.io, Azure, and Firebase, always with automated linting/tests. If you need a hands-on fullstack developer in Guatemala who can also collaborate remotely across time zones, I’m ready to join.</p>"
+                        },
+                        "es": {
+                            "text": "<p>Trabajo con equipos para diseñar, construir y lanzar productos de principio a fin: descubrimiento, arquitectura, definición de backlog y entrega iterativa. En frontend uso React/Vite, patrones de UI accesibles y design systems; en backend suelo entregar con Node/Fastify o Express, APIs REST/GraphQL, colas y observabilidad robusta. Bases de datos que más utilizo: PostgreSQL, Redis y Firestore cuando el tiempo real aporta valor.</p><p>Me importan los budgets de rendimiento, Core Web Vitals y la higiene de CI/CD para que los lanzamientos sean predecibles. He desplegado en Vercel, Fly.io, Azure y Firebase, siempre con linting y pruebas automatizadas. Si necesitas un desarrollador fullstack en Guatemala que también pueda colaborar en remoto, estoy listo para sumar.</p>"
+                        }
+                    }
+                },
+                {
+                    "id": 2,
+                    "img": "",
+                    "faIcon": "fa-solid fa-chalkboard-teacher",
+                    "faIconColors": { "bg": "", "fill": "" },
+                    "locales": {
+                        "en": {
+                            "text": "<p>I mentor developers and students on clean code, git flow, testing culture, and pragmatic architecture. At Fundación Kinal I build curricula around JavaScript, Python, databases, and the craft of delivering features in agile teams. I also help startups roll out onboarding plans, pair-programming routines, and documentation practices so velocity stays high without losing quality.</p><p>Recent focus areas: integrating LLMs for support workflows, fine-tuning prompts for chat/voice assistants, and connecting STT/TTS to internal tools. If your team needs someone to teach, facilitate, and keep shipping, I can blend mentoring with hands-on delivery.</p>"
+                        },
+                        "es": {
+                            "text": "<p>Mentorizo a desarrolladores y estudiantes en clean code, git flow, cultura de pruebas y arquitectura pragmática. En Fundación Kinal diseño mallas de JavaScript, Python, bases de datos y el oficio de entregar funcionalidades en equipos ágiles. También apoyo a startups a implementar planes de onboarding, rutinas de pair programming y documentación para mantener la velocidad sin sacrificar calidad.</p><p>Enfoques recientes: integrar LLMs en flujos de soporte, ajustar prompts para asistentes de chat/voz y conectar STT/TTS con herramientas internas. Si tu equipo necesita a alguien que enseñe, facilite y siga entregando, puedo combinar mentoring con delivery práctico.</p>"
                         }
                     }
                 }

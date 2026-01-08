@@ -1,3 +1,5 @@
+# llms.txt for jbrau.dev
 User-agent: *
 Allow: /
+Crawl-delay: 5
 Sitemap: https://jbrau.dev/sitemap.xml

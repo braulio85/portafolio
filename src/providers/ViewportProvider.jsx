@@ -130,6 +130,7 @@ function ViewportProvider({ children }) {
             window.lastCopiedToClipboardText = text
             setClipboardText(text)
         } catch (error) {
+            // Error handling if clipboard write fails
         } finally {
             textArea.remove()
         }

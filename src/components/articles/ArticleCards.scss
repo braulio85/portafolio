@@ -1,42 +1,42 @@
 @import '/src/styles/extend.scss';
 
 div.article-cards-items {
-    --item-padding-default: 30px;
+    --item-padding-default: 12px;
     --item-padding-bottom-offset: 8px;
     --item-padding: var(--item-padding-default) calc(var(--item-padding-default) + 8px)
         calc(var(--item-padding-default) + var(--item-padding-bottom-offset));
-    --avatar-size: 98px;
+    --avatar-size: 68px;
     --avatar-border-size: 7px;
-    --min-height: 260px;
+    --min-height: 160px;
 
     @include media-breakpoint-down(xxl) {
-        --avatar-size: 95px;
-        --item-padding-default: 30px;
+        --avatar-size: 65px;
+        --item-padding-default: 10px;
     }
 
     @include media-breakpoint-down(xl) {
-        --avatar-size: 90px;
-        --item-padding-default: 25px;
-        --min-height: 230px;
+        --avatar-size: 60px;
+        --item-padding-default: 8px;
+        --min-height: 140px;
     }
 
     @include media-breakpoint-down(lg) {
-        --avatar-size: 85px;
-        --item-padding-default: 20px;
+        --avatar-size: 55px;
+        --item-padding-default: 6px;
     }
 
     @include media-breakpoint-down(md) {
-        --avatar-size: 80px;
+        --avatar-size: 50px;
         --avatar-border-size: 6px;
-        --item-padding-default: 20px;
-        --min-height: 220px;
+        --item-padding-default: 4px;
+        --min-height: 120px;
     }
 
     @include media-breakpoint-down(sm) {
-        --avatar-size: 75px;
+        --avatar-size: 45px;
         --avatar-border-size: 6px;
-        --item-padding-default: 20px;
-        --min-height: 200px;
+        --item-padding-default: 2px;
+        --min-height: 100px;
     }
 }
 
