@@ -27,6 +27,42 @@
             },
             "items": [
                 {
+                    "id": 0,
+                    "img": "",
+                    "faIcon": "fa-solid fa-graduation-cap",
+                    "faIconColors": { "bg": "", "fill": "" },
+                    "dateStart": { "year": 2026, "month": 1 },
+                    "dateEnd": null,
+                    "locales": {
+                        "en": {
+                            "title": "Bachelor's in Educational Administration",
+                            "province": "",
+                            "country": "Guatemala",
+                            "institution": "Universidad del Istmo",
+                            "text": "Currently pursuing a degree in Educational Administration with focus on institutional management, educational leadership, and curriculum development.",
+                            "list": [
+                                "Educational leadership and management",
+                                "Curriculum design and evaluation",
+                                "Institutional strategic planning"
+                            ],
+                            "tags": ["Administration", "Education", "Leadership"]
+                        },
+                        "es": {
+                            "title": "Licenciatura en Administración Educativa",
+                            "province": "",
+                            "country": "Guatemala",
+                            "institution": "Universidad del Istmo",
+                            "text": "Actualmente cursando licenciatura en Administración Educativa con enfoque en gestión institucional, liderazgo educativo y desarrollo curricular.",
+                            "list": [
+                                "Liderazgo y gestión educativa",
+                                "Diseño y evaluación curricular",
+                                "Planificación estratégica institucional"
+                            ],
+                            "tags": ["Administración", "Educación", "Liderazgo"]
+                        }
+                    }
+                },
+                {
                     "id": 1,
                     "img": "",
                     "faIcon": "fa-solid fa-graduation-cap",

@@ -157,6 +157,11 @@ div.card {
     border-radius: $standard-border-radius;
     padding: 0;
 
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.7;
+    }
+
     // Sombra sutil elegante solo en light mode
     [data-theme='light'] & {
         border: 1px solid var(--theme-borders);
