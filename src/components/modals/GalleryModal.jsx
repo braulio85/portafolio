@@ -7,6 +7,8 @@ import {
 } from '/src/components/modals/base/ModalWrapper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 import { useUtils } from '/src/hooks/utils.js'
 import { useViewport } from '/src/providers/ViewportProvider.jsx'
 import { useScheduler } from '/src/hooks/scheduler.js'

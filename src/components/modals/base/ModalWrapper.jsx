@@ -127,7 +127,10 @@ function ModalWrapperFooterDescription({ title, description, faIcon }) {
         <div className={`modal-footer`}>
             <h6 className={`modal-footer-title text-default`}>
                 <i className={`${faIcon} text-primary me-2 eq-h5`} />
-                <span className={`fw-bold`} dangerouslySetInnerHTML={sanitizer.sanitizeForReact(title)} />
+                <span
+                    className={`fw-bold`}
+                    dangerouslySetInnerHTML={sanitizer.sanitizeForReact(title)}
+                />
             </h6>
 
             <div

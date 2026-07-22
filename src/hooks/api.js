@@ -8,7 +8,7 @@ export const useApi = () => {
         handlers,
         analytics,
     }
-};
+}
 
 const validators = {
     /**
@@ -36,8 +36,8 @@ const validators = {
                 errorCode: Constants.ErrorCodes.VALIDATION_MESSAGE_SPAM,
                 errorCondition: Utils.validation.isSpam(message),
             },
-        ];
-        const error = validations.find((validation) => validation.errorCondition);
+        ]
+        const error = validations.find((validation) => validation.errorCondition)
         return {
             success: !error,
             errorCode: error?.errorCode,
@@ -52,13 +52,13 @@ const validators = {
                 custom_source: Utils.url.getAbsoluteLocation(),
                 custom_source_name: 'React Portfolio',
             },
-        };
+        }
     },
 }
 
 const handlers = {
     /**
-     * @return {Promise<{success: (*|boolean)}>} 
+     * @return {Promise<{success: (*|boolean)}>}
      */
     dummyRequest: async () => {
         await new Promise((resolve) => setTimeout(resolve, 700))
@@ -82,15 +82,17 @@ const handlers = {
         const TIME_WINDOW = 60 * 60 * 1000 // 1 hour in milliseconds
 
         const now = Date.now()
-        const rateLimitData = JSON.parse(localStorage.getItem(RATE_LIMIT_KEY) || '{"timestamps":[]}')
-        const recentTimestamps = rateLimitData.timestamps.filter(ts => now - ts < TIME_WINDOW)
+        const rateLimitData = JSON.parse(
+            localStorage.getItem(RATE_LIMIT_KEY) || '{"timestamps":[]}'
+        )
+        const recentTimestamps = rateLimitData.timestamps.filter((ts) => now - ts < TIME_WINDOW)
         if (recentTimestamps.length >= MAX_EMAILS) {
             const oldestTimestamp = Math.min(...recentTimestamps)
             const timeUntilReset = Math.ceil((TIME_WINDOW - (now - oldestTimestamp)) / 60000) // minutes
-            return { 
-                success: false, 
+            return {
+                success: false,
                 rateLimited: true,
-                timeUntilReset 
+                timeUntilReset,
             }
         }
         emailjs.init(publicKey)
@@ -100,7 +102,10 @@ const handlers = {
             response.success = result.status === 200
             if (response.success) {
                 recentTimestamps.push(now)
-                localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify({ timestamps: recentTimestamps }))
+                localStorage.setItem(
+                    RATE_LIMIT_KEY,
+                    JSON.stringify({ timestamps: recentTimestamps })
+                )
             }
         } catch (error) {
             response.success = false

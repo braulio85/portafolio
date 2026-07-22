@@ -3,7 +3,7 @@
 
 // Importing plugins...
 @import 'bootstrap/scss/bootstrap';
-@import 'swiper/swiper-bundle.css';
+// Swiper CSS is loaded by Swipeable / GalleryModal to keep it out of the critical path
 
 // Importing core FontAwesome styling file...
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';

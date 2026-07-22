@@ -7,10 +7,14 @@ function GestureAwareButton({
     onClick = null,
     tooltip = '',
     disabled = false,
+    href = null,
     hrefToolTip = null,
 }) {
     const [isTouched, setIsTouched] = useState(false)
     const [dispatchClickAt, setDispatchClickAt] = useState(0)
+
+    // Prefer explicit href; keep hrefToolTip as a backward-compatible alias
+    const resolvedHref = href || hrefToolTip || undefined
 
     useEffect(() => {
         if (!dispatchClickAt) return
@@ -31,7 +35,10 @@ function GestureAwareButton({
     }
 
     const _onClick = (e) => {
-        e.preventDefault()
+        // Keep SPA navigation, but leave href in the DOM for crawlers
+        if (resolvedHref) {
+            e.preventDefault()
+        }
         e.stopPropagation()
         _dispatchClick()
     }
@@ -48,13 +55,13 @@ function GestureAwareButton({
         <a
             className={`gesture-aware-button ${className}`}
             data-tooltip={tooltip}
-            type={`button`}
-            href={hrefToolTip}
+            href={resolvedHref}
             onTouchStart={_onTouchStart}
             onTouchMove={_onTouchMove}
             onTouchEnd={_onTouchEnd}
             onClick={_onClick}
             draggable={false}
+            aria-disabled={disabled || undefined}
         >
             {children}
         </a>

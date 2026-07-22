@@ -115,7 +115,9 @@ function ArticleInfoListItem({ itemWrapper }) {
                 <div className={`article-info-list-item-info-body`}>
                     <div
                         className={`article-info-list-item-info-text ${textClass}`}
-                        dangerouslySetInnerHTML={sanitizer.sanitizeForReact(itemWrapper.locales.text)}
+                        dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
+                            itemWrapper.locales.text
+                        )}
                     />
 
                     {itemWrapper.link?.href && (

@@ -1,7 +1,6 @@
 import './ArticleCards.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense, lazy } from 'react'
 import Article from '/src/components/articles/base/Article.jsx'
-import Swipeable from '/src/components/capabilities/Swipeable.jsx'
 import AvatarView from '/src/components/generic/AvatarView.jsx'
 import DateBadge from '/src/components/widgets/DateBadge.jsx'
 import CircularButton from '/src/components/buttons/CircularButton.jsx'
@@ -9,6 +8,8 @@ import Link from '/src/components/generic/Link.jsx'
 import { useConstants } from '/src/hooks/constants.js'
 import { useViewport } from '/src/providers/ViewportProvider.jsx'
 import { useSanitizer } from '/src/hooks/sanitizer.js'
+
+const Swipeable = lazy(() => import('/src/components/capabilities/Swipeable.jsx'))
 
 /**
  * @param {ArticleDataWrapper} dataWrapper
@@ -47,14 +48,16 @@ function ArticleCardsItems({ dataWrapper, selectedItemCategoryId }) {
     const filteredItems = dataWrapper.getOrderedItemsFilteredBy(selectedItemCategoryId)
 
     return (
-        <Swipeable
-            className={`article-cards-items`}
-            breakpoints={constants.SWIPER_BREAKPOINTS_FOR_THREE_SLIDES}
-        >
-            {filteredItems.map((itemWrapper, key) => (
-                <ArticleCardsItem itemWrapper={itemWrapper} key={key} />
-            ))}
-        </Swipeable>
+        <Suspense fallback={<div className={`article-cards-items`} />}>
+            <Swipeable
+                className={`article-cards-items`}
+                breakpoints={constants.SWIPER_BREAKPOINTS_FOR_THREE_SLIDES}
+            >
+                {filteredItems.map((itemWrapper, key) => (
+                    <ArticleCardsItem itemWrapper={itemWrapper} key={key} />
+                ))}
+            </Swipeable>
+        </Suspense>
     )
 }
 

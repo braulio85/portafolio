@@ -27,7 +27,11 @@ function NavTabControllerLink({ link, active, data, onClick, onClickTimeout }) {
     const activeClass = active ? `nav-tab-controller-link-active` : ``
 
     return (
-        <GestureAwareButton className={`nav-tab-controller-link ${activeClass}`} onClick={onClick}>
+        <GestureAwareButton
+            className={`nav-tab-controller-link ${activeClass}`}
+            href={link.href}
+            onClick={onClick}
+        >
             <i className={`${link.faIcon}`} />
             <span dangerouslySetInnerHTML={sanitizer.sanitizeForReact(link.label)} />
         </GestureAwareButton>

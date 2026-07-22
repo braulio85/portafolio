@@ -24,7 +24,9 @@ export const Constants = {
     /** @const */
     MODE: import.meta.env.MODE,
     /** @const */
-    get PRODUCTION_MODE() { return this.MODE === 'production'; },
+    get PRODUCTION_MODE() {
+        return this.MODE === 'production'
+    },
     /** @const */
     SECTION_TRANSITION_TOTAL_TIME: 800,
     /** @const */
@@ -53,5 +55,5 @@ export const Constants = {
 
 // Hook para usar Constants de forma consistente con el resto del proyecto
 export function useConstants() {
-    return Constants;
+    return Constants
 }

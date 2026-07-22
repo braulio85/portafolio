@@ -14,8 +14,8 @@ function Logo({ className = '', style = {}, size, setDidLoad }) {
         <div className={`logo-wrapper ${sizeClass} ${className}`} style={style}>
             <img
                 src={utils.file.resolvePath(`/images/pictures/miniatura.webp`)}
-                width={320}
-                height={213}
+                width={120}
+                height={80}
                 decoding="async"
                 onLoad={() => {
                     setDidLoad && setDidLoad(true)

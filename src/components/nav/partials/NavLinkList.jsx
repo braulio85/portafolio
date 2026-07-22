@@ -49,7 +49,7 @@ function NavLink({ link, active, data, onClick }) {
     return (
         <GestureAwareButton
             className={`nav-link ${activeClass}`}
-            hrefToolTip={link.href}
+            href={link.href}
             tooltip={tooltip}
             onClick={onClick}
         >

@@ -20,7 +20,9 @@ function SectionHeader({ section }) {
             {parsedTitle.prefix && (
                 <div className={`section-header-prefix lead-2 mb-2`}>
                     <i className={`fa-solid fa-cubes`} />
-                    <span dangerouslySetInnerHTML={sanitizer.sanitizeForReact(parsedTitle.prefix)} />
+                    <span
+                        dangerouslySetInnerHTML={sanitizer.sanitizeForReact(parsedTitle.prefix)}
+                    />
                 </div>
             )}
 

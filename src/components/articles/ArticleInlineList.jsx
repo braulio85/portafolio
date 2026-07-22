@@ -86,9 +86,7 @@ function ArticleInlineListItem({ itemWrapper }) {
                 <span
                     className={`article-inline-list-item-label`}
                     dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
-                        itemWrapper.locales.label ||
-                            itemWrapper.label ||
-                            itemWrapper.placeholder
+                        itemWrapper.locales.label || itemWrapper.label || itemWrapper.placeholder
                     )}
                 />
             </Link>

@@ -4,7 +4,7 @@
  * @description This provider is responsible for managing feedbacks, modals and UI interactions.
  */
 
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState, Suspense, lazy } from 'react'
 import { useUtils } from '/src/hooks/utils.js'
 import { useScheduler } from '/src/hooks/scheduler.js'
 import { useLanguage } from '/src/providers/LanguageProvider.jsx'
@@ -14,7 +14,8 @@ import MouseLayer from '/src/components/mouse/MouseLayer.jsx'
 import NotificationsLayer from '/src/components/notifications/NotificationsLayer.jsx'
 import YoutubeVideoModal from '/src/components/modals/YoutubeVideoModal.jsx'
 import ConfirmationWindowModal from '/src/components/modals/ConfirmationWindowModal.jsx'
-import GalleryModal from '/src/components/modals/GalleryModal.jsx'
+
+const GalleryModal = lazy(() => import('/src/components/modals/GalleryModal.jsx'))
 
 function FeedbacksProvider({ children, canHaveAnimatedCursor }) {
     const scheduler = useScheduler()
@@ -195,7 +196,11 @@ function FeedbacksProvider({ children, canHaveAnimatedCursor }) {
                 }}
             />
 
-            <GalleryModal target={displayingGallery} onDismiss={closeGallery} />
+            {displayingGallery && (
+                <Suspense fallback={null}>
+                    <GalleryModal target={displayingGallery} onDismiss={closeGallery} />
+                </Suspense>
+            )}
 
             {children}
         </FeedbacksContext.Provider>

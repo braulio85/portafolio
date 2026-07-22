@@ -4,7 +4,19 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
     base: '/',
-    plugins: [react()],
+    plugins: [
+        react(),
+        {
+            // Defer built CSS so it does not block first paint; body bg is set inline in index.html
+            name: 'defer-stylesheet',
+            transformIndexHtml(html) {
+                return html.replace(
+                    /<link rel="stylesheet"([^>]*href="[^"]+\.css"[^>]*)>/g,
+                    '<link rel="stylesheet"$1 media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet"$1></noscript>'
+                )
+            },
+        },
+    ],
     build: {
         rollupOptions: {
             output: {

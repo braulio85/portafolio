@@ -7,9 +7,8 @@
 import ArticleItemDataWrapper from '/src/hooks/models/ArticleItemDataWrapper.js'
 import { Utils } from '/src/hooks/utils.js'
 
-
 export default class ArticleDataWrapper {
-    static CATEGORY_ALL = 'category_all';
+    static CATEGORY_ALL = 'category_all'
 
     /**
      * @param {Object} section
@@ -171,14 +170,14 @@ export default class ArticleDataWrapper {
 
     _evaluate() {
         // Check if all items have a valid categoryId...
-        const categories = this.categories.map((category) => category.id);
+        const categories = this.categories.map((category) => category.id)
         this._items.forEach((item) => {
             if (categories.length > 1 && !categories.includes(item.categoryId)) {
                 Utils.log.warn(
                     'ArticleDataWrapper',
                     `Item ${item.id} has an invalid categoryId "${item.categoryId}".`
-                );
+                )
             }
-        });
+        })
     }
 }

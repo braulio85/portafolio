@@ -64,7 +64,7 @@ export const useEnv = () => {
         getAllEnvVars,
         isProduction,
         isDevelopment,
-        
+
         // Specific getters for commonly used variables
         getEmailJsPublicKey: () => getEnvVar('EMAILJS_PUBLIC_KEY'),
         getEmailJsServiceId: () => getEnvVar('EMAILJS_SERVICE_ID'),

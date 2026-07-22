@@ -72,7 +72,9 @@ function ArticleNotFoundItem({ itemWrapper }) {
                     <tr key={prop.name}>
                         <th>{prop.name}</th>
                         <td>
-                            <span dangerouslySetInnerHTML={sanitizer.sanitizeForReact(prop.value)} />
+                            <span
+                                dangerouslySetInnerHTML={sanitizer.sanitizeForReact(prop.value)}
+                            />
                         </td>
                     </tr>
                 ))}

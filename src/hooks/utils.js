@@ -37,5 +37,5 @@ export const Utils = {
 
 // Hook para usar Utils de forma consistente con el resto del proyecto
 export function useUtils() {
-    return Utils;
+    return Utils
 }

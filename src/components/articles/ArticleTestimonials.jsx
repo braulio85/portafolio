@@ -1,13 +1,14 @@
 import './ArticleTestimonials.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense, lazy } from 'react'
 import Article from '/src/components/articles/base/Article.jsx'
-import Swipeable from '/src/components/capabilities/Swipeable.jsx'
 import { Balloon, BalloonQuote } from '/src/components/generic/Balloon'
 import { useViewport } from '/src/providers/ViewportProvider.jsx'
 import Link from '/src/components/generic/Link.jsx'
 import AvatarView from '/src/components/generic/AvatarView.jsx'
 import { useConstants } from '/src/hooks/constants.js'
 import { useSanitizer } from '/src/hooks/sanitizer.js'
+
+const Swipeable = lazy(() => import('/src/components/capabilities/Swipeable.jsx'))
 
 /**
  * @param {ArticleDataWrapper} dataWrapper
@@ -47,14 +48,16 @@ function ArticleTestimonialsItems({ dataWrapper, selectedItemCategoryId }) {
     const filteredItems = dataWrapper.getOrderedItemsFilteredBy(selectedItemCategoryId)
 
     return (
-        <Swipeable
-            className={`article-testimonials-items`}
-            breakpoints={constants.SWIPER_BREAKPOINTS_FOR_THREE_SLIDES}
-        >
-            {filteredItems.map((itemWrapper, key) => (
-                <ArticleTestimonialsItem itemWrapper={itemWrapper} key={key} />
-            ))}
-        </Swipeable>
+        <Suspense fallback={<div className={`article-testimonials-items`} />}>
+            <Swipeable
+                className={`article-testimonials-items`}
+                breakpoints={constants.SWIPER_BREAKPOINTS_FOR_THREE_SLIDES}
+            >
+                {filteredItems.map((itemWrapper, key) => (
+                    <ArticleTestimonialsItem itemWrapper={itemWrapper} key={key} />
+                ))}
+            </Swipeable>
+        </Suspense>
     )
 }
 
@@ -101,7 +104,9 @@ function ArticleTestimonialsItem({ itemWrapper }) {
 
                 <div
                     className={`article-testimonials-item-role text-2`}
-                    dangerouslySetInnerHTML={sanitizer.sanitizeForReact(itemWrapper.locales.title || '---')}
+                    dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
+                        itemWrapper.locales.title || '---'
+                    )}
                 />
             </div>
         </div>

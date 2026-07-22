@@ -6,30 +6,29 @@
 import { Utils } from '/src/hooks/utils.js'
 
 export default class ArticleItemDataWrapper {
-
     constructor(articleDataWrapper, rawData, language, theme, id) {
-        this._articleDataWrapper = articleDataWrapper;
-        this.id = id;
-        this.categoryId = rawData.categoryId;
-        this.category = undefined;
-        const date = this._parseDate(rawData.date);
-        const dateStart = this._parseDate(rawData.dateStart) || date;
-        const dateEnd = this._parseDate(rawData.dateEnd);
-        this.dateStart = date || dateStart;
-        this.dateStartDisplay = language.getDateLocaleString(this.dateStart);
-        this.dateStartDisplayAsExperienceTime = language.getExperienceTimeString(this.dateStart);
-        this.dateEnd = dateEnd;
-        this.dateEndDisplay = language.getDateLocaleString(dateEnd);
-        this.date = dateStart;
-        this.faIcon = rawData.faIcon;
-        this.faIconColors = this._parseColor(rawData.faIconColors, theme);
-        this.img = language.parseJsonText(rawData.img);
-        this.label = rawData.label;
-        this.link = this._parseLink(rawData.link, language);
-        this.copyToClipboardButton = rawData.copyToClipboardButton || false;
-        this.locales = this._parseLocales(rawData.locales, language);
-        this.percentage = this._parseNumber(rawData.percentage, 0, 100);
-        this.preview = this._parsePreview(rawData.preview, language);
+        this._articleDataWrapper = articleDataWrapper
+        this.id = id
+        this.categoryId = rawData.categoryId
+        this.category = undefined
+        const date = this._parseDate(rawData.date)
+        const dateStart = this._parseDate(rawData.dateStart) || date
+        const dateEnd = this._parseDate(rawData.dateEnd)
+        this.dateStart = date || dateStart
+        this.dateStartDisplay = language.getDateLocaleString(this.dateStart)
+        this.dateStartDisplayAsExperienceTime = language.getExperienceTimeString(this.dateStart)
+        this.dateEnd = dateEnd
+        this.dateEndDisplay = language.getDateLocaleString(dateEnd)
+        this.date = dateStart
+        this.faIcon = rawData.faIcon
+        this.faIconColors = this._parseColor(rawData.faIconColors, theme)
+        this.img = language.parseJsonText(rawData.img)
+        this.label = rawData.label
+        this.link = this._parseLink(rawData.link, language)
+        this.copyToClipboardButton = rawData.copyToClipboardButton || false
+        this.locales = this._parseLocales(rawData.locales, language)
+        this.percentage = this._parseNumber(rawData.percentage, 0, 100)
+        this.preview = this._parsePreview(rawData.preview, language)
     }
 
     _parseNumber(rawNumber, min = -99999999999, max = 99999999999) {
@@ -38,7 +37,7 @@ export default class ArticleItemDataWrapper {
         const cast = Number(rawNumber)
         if (isNaN(cast) || cast === null) return undefined
 
-        return Utils.number.clamp(cast, min, max);
+        return Utils.number.clamp(cast, min, max)
     }
 
     _parseColor(rawColor, _theme) {
@@ -55,7 +54,7 @@ export default class ArticleItemDataWrapper {
         return {
             backgroundColor: bgDarkColor,
             color: fillDarkColor,
-        };
+        }
     }
 
     _parseDate(rawDate) {
@@ -66,7 +65,7 @@ export default class ArticleItemDataWrapper {
         const year = rawDate.year
         const month = rawDate.month != null ? rawDate.month - 1 : 0
         const day = rawDate.day != null ? rawDate.day : 1
-        return new Date(year, month, day);
+        return new Date(year, month, day)
     }
 
     _parseLink(rawLink, language) {
@@ -78,7 +77,7 @@ export default class ArticleItemDataWrapper {
             href: rawLink.href,
             faIcon: rawLink.faIcon || undefined,
             tooltip: tooltipString ? language.getString(tooltipString) : null,
-        };
+        }
     }
 
     _parseLocales(locales, language) {
@@ -102,7 +101,7 @@ export default class ArticleItemDataWrapper {
             })
         }
 
-        return translations;
+        return translations
     }
 
     _parsePreview(rawPreview, language) {
@@ -134,15 +133,15 @@ export default class ArticleItemDataWrapper {
             links: links,
             screenshots: screenshots,
             youtubeVideo: rawPreview.youtubeVideo,
-        };
+        }
     }
 
     get uniqueId() {
-        return this._articleDataWrapper.uniqueId + '-item-' + this.id;
+        return this._articleDataWrapper.uniqueId + '-item-' + this.id
     }
 
     get articleWrapper() {
-        return this._articleDataWrapper;
+        return this._articleDataWrapper
     }
 
     get faIconStyle() {
@@ -151,13 +150,13 @@ export default class ArticleItemDataWrapper {
         return {
             backgroundColor: this.faIconColors['backgroundColor'] || null,
             color: this.faIconColors['color'] || null,
-        };
+        }
     }
 
     get imageAlt() {
-        if (this.label) return Utils.string.stripHTMLTags(this.label);
-        if (this.locales.title) return Utils.string.stripHTMLTags(this.locales.title);
-        return 'item-' + this.id;
+        if (this.label) return Utils.string.stripHTMLTags(this.label)
+        if (this.locales.title) return Utils.string.stripHTMLTags(this.locales.title)
+        return 'item-' + this.id
     }
 
     get fullLocation() {
@@ -167,20 +166,20 @@ export default class ArticleItemDataWrapper {
         if (this.locales.province && this.locales.country) location += ' – '
         if (this.locales.country) location += this.locales.country
 
-        return location;
+        return location
     }
 
     get shortLocation() {
-        if (this.locales.country) return this.locales.country;
-        return this.locales.province;
+        if (this.locales.country) return this.locales.country
+        return this.locales.province
     }
 
     get placeholder() {
-        return `Item ${this.id}`;
+        return `Item ${this.id}`
     }
 
     get faIconWithFallback() {
-        return this.faIcon || `fa-solid fa-clone`;
+        return this.faIcon || `fa-solid fa-clone`
     }
 
     listProps() {
@@ -196,27 +195,27 @@ export default class ArticleItemDataWrapper {
             'dateEnd',
             'percentage',
         ]
-        for (const key of staticKeys) props.push(this._parsePropForListing(key, this[key]));
+        for (const key of staticKeys) props.push(this._parsePropForListing(key, this[key]))
 
         const locales = this.locales || {}
         const localesEntries = Object.entries(locales)
-        for (const [key, value] of localesEntries) props.push(this._parsePropForListing(key, value));
+        for (const [key, value] of localesEntries) props.push(this._parsePropForListing(key, value))
 
         const previewKeys = ['youtubeVideo', 'hasScreenshots', 'hasLinks']
-        for (const key of previewKeys) props.push(this._parsePropForListing(key, this.preview[key]));
+        for (const key of previewKeys) props.push(this._parsePropForListing(key, this.preview[key]))
 
-        return props.filter((prop) => prop.value);
+        return props.filter((prop) => prop.value)
     }
 
     _parsePropForListing(name, value) {
-        if (value === null || value === undefined) return '';
+        if (value === null || value === undefined) return ''
         if (value instanceof Date)
-            value = value.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
-        else if (Array.isArray(value)) value = Utils.array.toHtmlList(value);
-        else if (typeof value === 'object') value = Utils.json.sanitizeForLogs(value);
+            value = value.toLocaleDateString(undefined, { month: 'long', year: 'numeric' })
+        else if (Array.isArray(value)) value = Utils.array.toHtmlList(value)
+        else if (typeof value === 'object') value = Utils.json.sanitizeForLogs(value)
         return {
             name,
             value: value.toString(),
-        };
+        }
     }
 }

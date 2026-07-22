@@ -94,12 +94,24 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
     const message = fieldsBundle?.message
     const emailDisplay = utils.storage.getWindowVariable(id + '-email')
     const didSubmit = status === ArticleContactForm.Status.SUBMITTED
-    
+
     // Usar variables de entorno con fallback a dataWrapper.settings
-    const turnstileSiteKey = getEnvVar('TURNSTILE_SITE_KEY', dataWrapper.settings?.turnstileSiteKey || dataWrapper.settings?.turnstile_site_key)
-    const emailJsPublicKey = getEnvVar('EMAILJS_PUBLIC_KEY', dataWrapper.settings?.emailJsPublicKey || dataWrapper.settings?.email_js_public_key)
-    const emailJsServiceId = getEnvVar('EMAILJS_SERVICE_ID', dataWrapper.settings?.emailJsServiceId || dataWrapper.settings?.email_js_service_id)
-    const emailJsTemplateId = getEnvVar('EMAILJS_TEMPLATE_ID', dataWrapper.settings?.emailJsTemplateId || dataWrapper.settings?.email_js_template_id)
+    const turnstileSiteKey = getEnvVar(
+        'TURNSTILE_SITE_KEY',
+        dataWrapper.settings?.turnstileSiteKey || dataWrapper.settings?.turnstile_site_key
+    )
+    const emailJsPublicKey = getEnvVar(
+        'EMAILJS_PUBLIC_KEY',
+        dataWrapper.settings?.emailJsPublicKey || dataWrapper.settings?.email_js_public_key
+    )
+    const emailJsServiceId = getEnvVar(
+        'EMAILJS_SERVICE_ID',
+        dataWrapper.settings?.emailJsServiceId || dataWrapper.settings?.email_js_service_id
+    )
+    const emailJsTemplateId = getEnvVar(
+        'EMAILJS_TEMPLATE_ID',
+        dataWrapper.settings?.emailJsTemplateId || dataWrapper.settings?.email_js_template_id
+    )
 
     const errorMessage = validationError
         ? language
@@ -142,7 +154,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
         if (turnstileSiteKey && !turnstileToken) {
             feedbacks.displayNotification(
                 language.getString('error'),
-                language.getString('en') === 'en' 
+                language.getString('en') === 'en'
                     ? 'Please complete the CAPTCHA verification.'
                     : 'Por favor completa la verificación CAPTCHA.',
                 'error'
@@ -187,11 +199,11 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
         }
 
         feedbacks.setActivitySpinnerVisible(false, dataWrapper.uniqueId)
-        
+
         // Check for rate limiting
         if (apiResponse?.rateLimited) {
             setStatus(ArticleContactForm.Status.WAITING_FOR_SUBMISSION)
-            const timeMsg = apiResponse.timeUntilReset 
+            const timeMsg = apiResponse.timeUntilReset
                 ? ` Please try again in ${apiResponse.timeUntilReset} minute(s).`
                 : ' Please try again later.'
             feedbacks.displayNotification(
@@ -201,7 +213,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
             )
             return
         }
-        
+
         _onApiResponse(apiResponse?.success)
     }
 
@@ -239,7 +251,13 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
                     {turnstileSiteKey && (
                         <RowFormGroup className="col-12">
                             <RowFormGroupItem>
-                                <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        margin: '20px 0',
+                                    }}
+                                >
                                     <Turnstile
                                         siteKey={turnstileSiteKey}
                                         onSuccess={(token) => setTurnstileToken(token)}
@@ -254,7 +272,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
                             </RowFormGroupItem>
                         </RowFormGroup>
                     )}
-                    
+
                     <RowFormGroupSubmit
                         faIcon={`fa-solid fa-envelope`}
                         label={language.getString('send_message')}

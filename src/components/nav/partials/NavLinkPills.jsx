@@ -25,7 +25,11 @@ function NavLinkPillsLink({ link, active, data, onClick, onClickTimeout }) {
     const activeClass = active ? `nav-link-pills-link-active` : ``
 
     return (
-        <GestureAwareButton className={`nav-link-pills-link ${activeClass}`} onClick={onClick}>
+        <GestureAwareButton
+            className={`nav-link-pills-link ${activeClass}`}
+            href={link.href}
+            onClick={onClick}
+        >
             <i className={`${link.faIcon}`} />
             <span dangerouslySetInnerHTML={sanitizer.sanitizeForReact(link.label)} />
         </GestureAwareButton>

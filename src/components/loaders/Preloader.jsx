@@ -22,8 +22,8 @@ const PreloaderState = {
 
 function Preloader({ children, preloaderSettings }) {
     const scheduler = useScheduler()
-    const utils = useUtils();
-    const constants = Constants;
+    const utils = useUtils()
+    const constants = Constants
 
     const enabled = preloaderSettings?.enabled
     const title = preloaderSettings?.title || ''
@@ -297,7 +297,10 @@ function PreloaderWindowInfo({ title, subtitle, logoOffset, hidden, setDidLoadLo
                     style={logoStyle}
                 />
 
-                <h5 className={`lead-2 mb-0`} dangerouslySetInnerHTML={sanitizer.sanitizeForReact(title)} />
+                <h5
+                    className={`lead-2 mb-0`}
+                    dangerouslySetInnerHTML={sanitizer.sanitizeForReact(title)}
+                />
             </div>
 
             <div
