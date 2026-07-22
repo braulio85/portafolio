@@ -51,7 +51,7 @@ div.nav-profile-card {
         }
     }
 
-    h1.nav-profile-card-name {
+    .nav-profile-card-name {
         text-align: center;
 
         margin-left: 10px;
@@ -59,6 +59,7 @@ div.nav-profile-card {
         margin-bottom: 4px;
         font-size: 1.25rem !important;
         line-height: 1.8rem !important;
+        font-weight: $font-weight-bold;
 
         @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
             font-size: 1.5rem !important;
@@ -66,7 +67,7 @@ div.nav-profile-card {
         }
     }
 
-    h1.nav-profile-card-name-with-audio-button {
+    .nav-profile-card-name-with-audio-button {
         @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
             margin-left: 65px;
             margin-right: 65px;

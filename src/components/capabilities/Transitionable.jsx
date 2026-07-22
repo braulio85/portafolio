@@ -69,7 +69,6 @@ function Transitionable({
             <div className={`transitionable ${className}`}>
                 {renderingChildren.map((child, key) => (
                     <TransitionableItem
-                        children={child}
                         id={id + '-' + key}
                         index={key}
                         key={key}
@@ -77,7 +76,9 @@ function Transitionable({
                         transitionsEnabled={transitionsEnabled}
                         refreshCount={refreshCount}
                         delayBetweenItems={delayBetweenItems}
-                    />
+                    >
+                        {child}
+                    </TransitionableItem>
                 ))}
             </div>
         </div>

@@ -11,6 +11,8 @@ function ImageView({
     id = null,
     hideSpinner = false,
     style = null,
+    width = null,
+    height = null,
     onStatus = null,
 }) {
     const [loadStatus, setLoadStatus] = useState(ImageView.LoadStatus.LOADING)
@@ -54,6 +56,8 @@ function ImageView({
             <ImageViewContainer
                 src={src}
                 alt={alt}
+                width={width}
+                height={height}
                 visible={containerVisible}
                 loadStatus={loadStatus}
                 onLoad={_onLoad}
@@ -72,7 +76,7 @@ ImageView.LoadStatus = {
     ERROR: 'error',
 }
 
-function ImageViewContainer({ src, alt, visible, loadStatus, onLoad, onError }) {
+function ImageViewContainer({ src, alt, width, height, visible, loadStatus, onLoad, onError }) {
     const constants = useConstants()
     const utils = useUtils()
 
@@ -84,6 +88,9 @@ function ImageViewContainer({ src, alt, visible, loadStatus, onLoad, onError }) 
             className={`image-view-img ${visibleClass} ${constants.HTML_CLASSES.imageView} ${constants.HTML_CLASSES.imageView}-${loadStatus}`}
             src={resolvedSrc}
             alt={alt}
+            width={width || undefined}
+            height={height || undefined}
+            decoding="async"
             onLoad={onLoad}
             onError={onError}
         />

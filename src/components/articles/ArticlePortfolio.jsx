@@ -117,7 +117,7 @@ function ArticlePortfolioItemTitle({ itemWrapper }) {
 
     return (
         <div className={`article-portfolio-item-title`}>
-            <h5
+            <h4
                 className={`article-portfolio-item-title-main`}
                 dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
                     itemWrapper.locales.title || itemWrapper.placeholder

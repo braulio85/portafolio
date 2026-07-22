@@ -65,6 +65,8 @@ function NavProfileCard({ profile, expanded }) {
                 className={`nav-profile-card-avatar`}
                 hideSpinner={true}
                 alt={name}
+                width={320}
+                height={320}
             />
 
             {statusCircleVisible && (
@@ -78,7 +80,7 @@ function NavProfileCard({ profile, expanded }) {
             )}
 
             <div className={`nav-profile-card-info`}>
-                <h2 className={`nav-profile-card-name ${navProfileCardNameClass}`}>
+                <p className={`nav-profile-card-name ${navProfileCardNameClass}`}>
                     <span dangerouslySetInnerHTML={sanitizer.sanitizeForReact(stylizedName)} />
                     {namePronunciationButtonVisible && (
                         <AudioButton
@@ -87,7 +89,7 @@ function NavProfileCard({ profile, expanded }) {
                             size={AudioButton.Sizes.DYNAMIC_FOR_NAV_TITLE}
                         />
                     )}
-                </h2>
+                </p>
 
                 {roles?.length > 1 && (
                     <TextTyper

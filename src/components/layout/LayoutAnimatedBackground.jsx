@@ -1,13 +1,11 @@
 import './LayoutAnimatedBackground.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useUtils } from '/src/hooks/utils.js'
 import Animable from '/src/components/capabilities/Animable.jsx'
 
 function LayoutAnimatedBackground() {
     const utils = useUtils()
-
-    const canvas = document.getElementById(`layout-animated-background-canvas`)
-    const context = canvas?.getContext('2d')
+    const canvasRef = useRef(null)
 
     const [circles, setCircles] = useState([])
     const maxCircles = 24
@@ -82,6 +80,18 @@ function LayoutAnimatedBackground() {
         }
     }
 
+    const _syncCanvasSize = () => {
+        const canvas = canvasRef.current
+        if (!canvas) return
+
+        const width = window.innerWidth
+        const height = window.innerHeight
+        if (canvas.width !== width || canvas.height !== height) {
+            canvas.width = width
+            canvas.height = height
+        }
+    }
+
     /** @constructs **/
     useEffect(() => {
         const circles = Array.from(
@@ -90,6 +100,10 @@ function LayoutAnimatedBackground() {
         )
 
         setCircles(circles)
+        _syncCanvasSize()
+
+        window.addEventListener('resize', _syncCanvasSize)
+        return () => window.removeEventListener('resize', _syncCanvasSize)
     }, [null])
 
     const _step = (event) => {
@@ -101,6 +115,8 @@ function LayoutAnimatedBackground() {
     }
 
     const _draw = (updatedCircles) => {
+        const canvas = canvasRef.current
+        const context = canvas?.getContext('2d')
         if (!canvas || !context) return
 
         const backgroundColor = utils.css.getRootSCSSVariable('--theme-background')
@@ -109,8 +125,6 @@ function LayoutAnimatedBackground() {
 
         const backgroundColorRgba = utils.css.hexToRgba(backgroundColor, 1)
 
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
         context.clearRect(0, 0, canvas.width, canvas.height)
 
         context.fillStyle = backgroundColorRgba
@@ -141,7 +155,7 @@ function LayoutAnimatedBackground() {
             animationId={`layout-animated-background`}
             onEnterFrame={_step}
         >
-            <canvas id={`layout-animated-background-canvas`} />
+            <canvas id={`layout-animated-background-canvas`} ref={canvasRef} />
         </Animable>
     )
 }

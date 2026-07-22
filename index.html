@@ -16,13 +16,13 @@
         <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
         <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-        <meta 
-            http-equiv="Content-Security-Policy" 
-            content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com https://challenges.cloudflare.com https://admin.ryanbalieiro.com https://plausible.io; frame-src https://challenges.cloudflare.com;" 
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com https://challenges.cloudflare.com https://admin.ryanbalieiro.com https://plausible.io; frame-src https://challenges.cloudflare.com;"
         />
 
         <!-- Meta: Configurations -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="format-detection" content="address=no" />
         <meta name="color-scheme" content="dark" />
 
@@ -44,53 +44,85 @@
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://jbrau.dev/" />
-        <meta property="og:title" content="Braulio Echeverría | Dev fullstack y mentor en Guatemala" />
-        <meta property="og:description" content="Portafolio de Braulio Echeverría, desarrollador fullstack en Guatemala: proyectos de software, docencia, mentoring tecnológico y colaboraciones remotas." />
+        <meta
+            property="og:title"
+            content="Braulio Echeverría | Dev fullstack y mentor en Guatemala"
+        />
+        <meta
+            property="og:description"
+            content="Portafolio de Braulio Echeverría, desarrollador fullstack en Guatemala: proyectos de software, docencia, mentoring tecnológico y colaboraciones remotas."
+        />
         <meta property="og:image" content="https://jbrau.dev/images/pictures/miniatura2-og.webp" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://jbrau.dev/" />
-        <meta property="twitter:title" content="Braulio Echeverría | Dev fullstack y mentor en Guatemala" />
-        <meta property="twitter:description" content="Portafolio de Braulio Echeverría, desarrollador fullstack en Guatemala: proyectos de software, docencia, mentoring tecnológico y colaboraciones remotas." />
-        <meta property="twitter:image" content="https://jbrau.dev/images/pictures/miniatura2-og.webp" />
+        <meta
+            property="twitter:title"
+            content="Braulio Echeverría | Dev fullstack y mentor en Guatemala"
+        />
+        <meta
+            property="twitter:description"
+            content="Portafolio de Braulio Echeverría, desarrollador fullstack en Guatemala: proyectos de software, docencia, mentoring tecnológico y colaboraciones remotas."
+        />
+        <meta
+            property="twitter:image"
+            content="https://jbrau.dev/images/pictures/miniatura2-og.webp"
+        />
 
         <!-- Structured Data -->
-                <script type="application/ld+json">
-                        {
-                                "@context": "https://schema.org",
-                                "@type": "Person",
-                                "name": "Braulio Echeverría",
-                                "alternateName": "jbrau.dev",
-                                "url": "https://jbrau.dev/",
-                                "image": "https://jbrau.dev/images/pictures/miniatura2-og.webp",
-                                "jobTitle": "Desarrollador, Docente, Entusiasta de la tecnología",
-                                "description": "Portafolio de Braulio Echeverría, desarrollador fullstack en Guatemala: proyectos de software, docencia, mentoring tecnológico y colaboraciones remotas.",
-                                "sameAs": [
-                                    "https://github.com/Jbraulio85",
-                                    "https://linkedin.com/in/braulio-echeverria"
-                                ]
-                        }
-                </script>
-    <!-- SEO: SITEMAP Y ROBOTS -->
-    <!--
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Braulio Echeverría",
+                "alternateName": "jbrau.dev",
+                "url": "https://jbrau.dev/",
+                "image": "https://jbrau.dev/images/pictures/miniatura2-og.webp",
+                "jobTitle": "Desarrollador, Docente, Entusiasta de la tecnología",
+                "description": "Portafolio de Braulio Echeverría, desarrollador fullstack en Guatemala: proyectos de software, docencia, mentoring tecnológico y colaboraciones remotas.",
+                "sameAs": [
+                    "https://github.com/Jbraulio85",
+                    "https://linkedin.com/in/braulio-echeverria"
+                ]
+            }
+        </script>
+        <!-- SEO: SITEMAP Y ROBOTS -->
+        <!--
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     -->
 
-        <!-- Fonts -->
+        <!-- Fonts: non-blocking load to avoid render-blocking critical path -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+            media="print"
+            onload="this.media = 'all'"
+        />
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+                rel="stylesheet"
+            />
+        </noscript>
 
         <!-- Analytics: Plausible (privacy-friendly) -->
         <script defer data-domain="jbrau.dev" src="https://plausible.io/js/script.js"></script>
     </head>
     <body style="background-color: #111111">
         <noscript>
-            <img src="https://plausible.io/api/event?no-script=true&domain=jbrau.dev" alt="" style="display:none" />
+            <img
+                src="https://plausible.io/api/event?no-script=true&domain=jbrau.dev"
+                alt=""
+                style="display: none"
+            />
         </noscript>
         <div id="root"></div>
         <script type="module" src="/src/main.jsx"></script>

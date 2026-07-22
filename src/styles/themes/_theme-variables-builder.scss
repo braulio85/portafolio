@@ -137,7 +137,10 @@ $theme-contrast-steps: (1%, 2%, 3%, 4%, 5%, 6%, 7%, 8%, 9%, 10%, 12.5%, 15%, 17.
 
     @if ($isDarkMode) {
         --theme-texts-light: var(--theme-texts-5);
-        --theme-texts-light-2: #{lighten($theme-secondary, 25%)};
+        --theme-texts-light-2: #{lighten(
+                $theme-secondary,
+                45%
+            )}; // ~#8fa3c4, WCAG AA on dark boards
         --theme-texts-light-3: #{darken($theme-secondary, 10%)};
         --theme-texts-light-4: #{darken($theme-secondary, 15%)};
     } @else {

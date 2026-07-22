@@ -86,6 +86,8 @@ function Scrollable({
     )
 }
 
+// smooth-scrollbar plugin registration (not a React Hook)
+// eslint-disable-next-line react-hooks/rules-of-hooks
 Scrollbar.use(OverscrollPlugin)
 
 export default Scrollable

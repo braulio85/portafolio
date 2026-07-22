@@ -1,6 +1,6 @@
 @import '/src/styles/extend.scss';
 
-div.layout-slideshow {
+.layout-slideshow {
     display: grid;
     grid-template-columns: 1fr;
     width: calc(100% + var(--default-card-spacing));
@@ -24,7 +24,7 @@ div.layout-slideshow {
     }
 }
 
-div.layout-slideshow-transitioning {
+.layout-slideshow-transitioning {
     @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
         overflow: hidden;
     }

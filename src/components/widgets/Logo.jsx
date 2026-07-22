@@ -2,9 +2,8 @@
 import './Logo.scss'
 import { Utils } from '/src/hooks/utils.js'
 
-
 function Logo({ className = '', style = {}, size, setDidLoad }) {
-    const utils = Utils;
+    const utils = Utils
 
     className = className || ``
     size = utils.number.forceIntoBounds(size, 0, 3, 3)
@@ -15,6 +14,9 @@ function Logo({ className = '', style = {}, size, setDidLoad }) {
         <div className={`logo-wrapper ${sizeClass} ${className}`} style={style}>
             <img
                 src={utils.file.resolvePath(`/images/pictures/miniatura.webp`)}
+                width={320}
+                height={213}
+                decoding="async"
                 onLoad={() => {
                     setDidLoad && setDidLoad(true)
                 }}

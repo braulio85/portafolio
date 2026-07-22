@@ -95,7 +95,7 @@ function ArticleItemInfoForTimelinesHeader({ itemWrapper, className = '', dateIn
     return (
         <div className={`article-timeline-item-info-for-timelines-header ${className}`}>
             <div className={`article-timeline-item-info-for-timelines-header-title`}>
-                <h5
+                <h4
                     className={``}
                     dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
                         itemWrapper.locales.title || itemWrapper.placeholder
@@ -206,7 +206,9 @@ function ArticleItemInfoForTimelinesPreviewFooter({ itemWrapper, className = '' 
         <div className={`article-timeline-item-info-preview-footer ${className}`}>
             <div
                 className={`article-timeline-item-info-preview-footer-title text-3`}
-                dangerouslySetInnerHTML={sanitizer.sanitizeForReact(language.getString('get_to_know_more'))}
+                dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
+                    language.getString('get_to_know_more')
+                )}
             />
             <ArticleItemPreviewMenu itemWrapper={itemWrapper} spaceBetween={false} />
         </div>

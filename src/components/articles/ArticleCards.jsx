@@ -99,7 +99,7 @@ function ArticleCardsItem({ itemWrapper }) {
             </div>
 
             <div className={`article-cards-item-content`}>
-                <h6
+                <h4
                     className={`article-cards-item-content-title ${titleClass}`}
                     dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
                         itemWrapper.locales.title || itemWrapper.placeholder

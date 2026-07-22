@@ -74,13 +74,13 @@ function ArticleTitle({ title }) {
     const sanitizer = useSanitizer()
 
     return (
-        <h4 className={`article-title`}>
+        <h3 className={`article-title`}>
             <span className={`article-title-prefix eq-h3 ms-1 me-2 pe-1`}>|</span>
             <span
                 className={`article-title-text mb-0`}
                 dangerouslySetInnerHTML={sanitizer.sanitizeForReact(title)}
             />
-        </h4>
+        </h3>
     )
 }
 

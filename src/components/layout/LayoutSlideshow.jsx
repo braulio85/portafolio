@@ -15,7 +15,7 @@ function LayoutSlideshow({ sections, currentSection, previousSection }) {
     }
 
     return (
-        <div className={`layout-slideshow ${transitioningClass}`}>
+        <main className={`layout-slideshow ${transitioningClass}`} role="main">
             {sections.map((section, index) => (
                 <Section
                     key={section.id}
@@ -24,7 +24,7 @@ function LayoutSlideshow({ sections, currentSection, previousSection }) {
                     shouldTransition={_shouldTransition(section)}
                 />
             ))}
-        </div>
+        </main>
     )
 }
 
