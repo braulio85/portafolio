@@ -1,0 +1,8 @@
+name = "portfolio-contact-ack"
+main = "src/index.js"
+compatibility_date = "2025-07-01"
+workers_dev = true
+
+[vars]
+RESEND_FROM = "Braulio Echeverría <noreply@jbrau.dev>"
+RESEND_REPLY_TO = "braulioecheverria@kinal.org.gt"

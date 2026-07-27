@@ -32,7 +32,7 @@
                     "faIcon": "fa-solid fa-graduation-cap",
                     "faIconColors": { "bg": "", "fill": "" },
                     "dateStart": { "year": 2026, "month": 1 },
-                    "dateEnd": null,
+                    "dateEnd": { "now": true },
                     "locales": {
                         "en": {
                             "title": "Bachelor's in Educational Administration",

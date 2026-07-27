@@ -63,42 +63,6 @@
                     }
                 },
                 {
-                    "id": 2,
-                    "img": "",
-                    "faIcon": "fa-solid fa-rocket",
-                    "faIconColors": { "bg": "", "fill": "" },
-                    "dateStart": { "year": 2024, "month": 2 },
-                    "dateEnd": { "now": true },
-                    "locales": {
-                        "en": {
-                            "title": "Co-founder / Front-end Developer",
-                            "province": "Remote",
-                            "country": "Guatemala",
-                            "institution": "ShuCode GT",
-                            "text": "Lead UI and front-end delivery for client projects, coordinating API integrations and QA.",
-                            "list": [
-                                "Front-end development with React and design systems",
-                                "API integration and end-to-end testing",
-                                "Client communication and delivery of full-stack features"
-                            ],
-                            "tags": ["React", "Frontend", "APIs", "Testing"]
-                        },
-                        "es": {
-                            "title": "Cofundador / Desarrollador Front-end",
-                            "province": "Remoto",
-                            "country": "Guatemala",
-                            "institution": "ShuCode GT",
-                            "text": "Líder de UI y front-end para proyectos de clientes, coordinando integraciones de API y QA.",
-                            "list": [
-                                "Desarrollo front-end con React y sistemas de diseño",
-                                "Integración de APIs y pruebas end-to-end",
-                                "Comunicación con clientes y entrega de features full-stack"
-                            ],
-                            "tags": ["React", "Frontend", "APIs", "QA"]
-                        }
-                    }
-                },
-                {
                     "id": 3,
                     "img": "",
                     "faIcon": "fa-solid fa-chalkboard-teacher",

@@ -64,16 +64,20 @@ function OptionPickerButton({
 }
 
 function OptionPickerButtonToggle({ option, caretIcon, onClick, tooltipLabel }) {
+    const accessibleName = tooltipLabel || option?.label || undefined
+
     return (
         <Dropdown.Toggle
             variant={`transparent`}
             className={`btn-option-picker-toggle`}
             onClickCapture={onClick}
             data-tooltip={tooltipLabel}
+            aria-label={accessibleName}
+            title={accessibleName}
         >
             <OptionPickerButtonPickerIcon option={option} size={2} />
 
-            {caretIcon && <i className={`fa-caret-icon ${caretIcon}`} />}
+            {caretIcon && <i className={`fa-caret-icon ${caretIcon}`} aria-hidden="true" />}
         </Dropdown.Toggle>
     )
 }

@@ -139,6 +139,17 @@ function ArticleInfoListItem({ itemWrapper }) {
                         </Link>
                     )}
 
+                    {!itemWrapper.link?.href &&
+                        !itemWrapper.locales.text &&
+                        (itemWrapper.label || itemWrapper.locales.label) && (
+                            <span
+                                className={`${textClass} text-3 d-inline`}
+                                dangerouslySetInnerHTML={sanitizer.sanitizeForReact(
+                                    itemWrapper.locales.label || itemWrapper.label
+                                )}
+                            />
+                        )}
+
                     {itemWrapper.copyToClipboardButton && (
                         <CopyButton
                             text={

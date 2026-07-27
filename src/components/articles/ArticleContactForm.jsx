@@ -198,6 +198,17 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
             apiResponse = await api.handlers.dummyRequest()
         }
 
+        // Auto-reply to the visitor via Resend (server-side). Never block success if this fails.
+        if (apiResponse?.success) {
+            api.handlers
+                .sendContactAcknowledgment({
+                    name,
+                    email,
+                    language: language.selectedLanguageId || 'es',
+                })
+                .catch(() => {})
+        }
+
         feedbacks.setActivitySpinnerVisible(false, dataWrapper.uniqueId)
 
         // Check for rate limiting

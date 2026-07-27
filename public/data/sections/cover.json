@@ -50,6 +50,15 @@
                         "tooltipString": "see_on_github"
                     },
                     "faIcon": "fa-brands fa-github"
+                },
+                {
+                    "id": 4,
+                    "label": "@josebraulioe",
+                    "link": {
+                        "href": "https://www.linkedin.com/in/josebraulioe/",
+                        "tooltipString": "see_on_linkedin"
+                    },
+                    "faIcon": "fa-brands fa-linkedin"
                 }
             ]
         },
@@ -73,10 +82,10 @@
                     "faIconColors": { "bg": "", "fill": "" },
                     "locales": {
                         "en": {
-                            "text": "<p>I’m Braulio, a {{fullstack developer}} from Guatemala. I build modern web apps, wire backend/frontend together, and lately I’ve been integrating LLM/STT/TTS to automate workflows for Fundación Kinal and clients.</p><p>I co-founded ShuCode GT to craft polished UIs, and I teach programming to keep teams growing with solid fundamentals: Git, clean code, OOP, and agile habits.</p><p>If you need someone who can ship, teach, and iterate fast, let’s build something great [[together!]]</p>"
+                            "text": "<p>I’m Braulio, a {{fullstack developer}} from Guatemala. I build modern web apps, wire backend/frontend together, and lately I’ve been integrating LLM/STT/TTS to automate workflows for Fundación Kinal and clients.</p><p>I teach programming to keep teams growing with solid fundamentals: Git, clean code, OOP, and agile habits—combining delivery with mentoring so people ship with confidence.</p><p>If you need someone who can ship, teach, and iterate fast, let’s build something great [[together!]]</p>"
                         },
                         "es": {
-                            "text": "<p>Soy Braulio, {{profesor de programación}} y desarrollador fullstack de Guatemala. Durante los últimos años he estado enseñando desarrollo de software en Fundación Kinal, donde diseño mallas curriculares, mentorizo estudiantes en prácticas de clean code y ayudo a construir sus bases en Git, POO y metodologías ágiles.</p><p>Más allá del aula, desarrollo aplicaciones web modernas y recientemente comencé a integrar tecnologías de IA (LLM/STT/TTS) para automatizar flujos de trabajo tanto en proyectos educativos como de clientes. Cofundé ShuCode GT, donde nos enfocamos en entregar interfaces pulidas y soluciones full-stack.</p><p>Si buscas a alguien que pueda enseñar, desarrollar y conectar el aprendizaje con la aplicación real, hagamos algo significativo [[juntos!]]</p>"
+                            "text": "<p>Soy Braulio, {{profesor de programación}} y desarrollador fullstack de Guatemala. Durante los últimos años he estado enseñando desarrollo de software en Fundación Kinal, donde diseño mallas curriculares, mentorizo estudiantes en prácticas de clean code y ayudo a construir sus bases en Git, POO y metodologías ágiles.</p><p>Más allá del aula, desarrollo aplicaciones web modernas y recientemente comencé a integrar tecnologías de IA (LLM/STT/TTS) para automatizar flujos de trabajo tanto en proyectos educativos como de clientes.</p><p>Si buscas a alguien que pueda enseñar, desarrollar y conectar el aprendizaje con la aplicación real, hagamos algo significativo [[juntos!]]</p>"
                         }
                     }
                 }

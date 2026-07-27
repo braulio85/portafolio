@@ -11,7 +11,7 @@
                 "title_short": "Contacto",
                 "title_short_nav": "Contacto",
                 "title_long_prefix": "No dudes en",
-                "title_long": "{{Contácta}}me"
+                "title_long": "{{Contáctame}}"
             }
         }
     },
@@ -78,7 +78,7 @@
                     "label": "@josebraulioe",
                     "link": {
                         "href": "https://www.linkedin.com/in/josebraulioe/",
-                        "tooltipString": "open_website"
+                        "tooltipString": "see_on_linkedin"
                     },
                     "copyToClipboardButton": false,
                     "locales": {
@@ -93,7 +93,7 @@
                     "label": "@Jbraulio85",
                     "link": {
                         "href": "https://github.com/Jbraulio85",
-                        "tooltipString": "open_website"
+                        "tooltipString": "see_on_github"
                     },
                     "copyToClipboardButton": false,
                     "locales": {
@@ -103,26 +103,20 @@
                 },
                 {
                     "id": 4,
-                    "faIcon": "fa-solid fa-globe",
-                    "faIconColors": { "bg": "", "fill": "" },
-                    "label": "shucode.lat",
-                    "link": { "href": "https://shucode.lat/", "tooltipString": "open_website" },
-                    "copyToClipboardButton": false,
-                    "locales": {
-                        "en": { "title": "Website" },
-                        "es": { "title": "Sitio Web" }
-                    }
-                },
-                {
-                    "id": 5,
                     "faIcon": "fa-solid fa-location-dot",
                     "faIconColors": { "bg": "", "fill": "" },
-                    "label": "Guatemala",
+                    "label": "Ciudad de Guatemala, Guatemala",
                     "link": { "href": "", "tooltipString": "" },
                     "copyToClipboardButton": false,
                     "locales": {
-                        "en": { "title": "Location" },
-                        "es": { "title": "Ubicación" }
+                        "en": {
+                            "title": "Location",
+                            "text": "Guatemala City, Guatemala"
+                        },
+                        "es": {
+                            "title": "Ubicación",
+                            "text": "Ciudad de Guatemala, Guatemala"
+                        }
                     }
                 }
             ]

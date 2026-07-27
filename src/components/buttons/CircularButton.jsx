@@ -8,14 +8,20 @@ function CircularButton({
     size = 'circular-button-size-default',
     tooltip = null,
     className = '',
+    ariaLabel = null,
 }) {
+    const accessibleName = ariaLabel || tooltip || undefined
+
     return (
         <button
+            type="button"
             className={`circular-button ${variant} ${size} ${className}`}
             data-tooltip={tooltip}
             onClick={onClick}
+            aria-label={accessibleName}
+            title={accessibleName}
         >
-            <i className={`${faIcon}`} />
+            <i className={`${faIcon}`} aria-hidden="true" />
         </button>
     )
 }

@@ -112,6 +112,8 @@ function Link({
             onMouseEnter={_onMouseEnter}
             onMouseLeave={_onMouseLeave}
             data-tooltip={tooltip}
+            aria-label={tooltip || undefined}
+            title={tooltip || undefined}
             draggable={false}
         >
             {children}

@@ -57,8 +57,15 @@ function CopyButton({ text = '', buttonClassName = '' }) {
                 targetId={uniqueId}
             />
 
-            <button className={`copy-button`} id={uniqueId} onClick={_onClick}>
-                <i className={`${faIcon}`} />
+            <button
+                type="button"
+                className={`copy-button`}
+                id={uniqueId}
+                onClick={_onClick}
+                aria-label={tooltipText}
+                title={tooltipText}
+            >
+                <i className={`${faIcon}`} aria-hidden="true" />
             </button>
         </div>
     )

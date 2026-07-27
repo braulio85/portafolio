@@ -153,34 +153,6 @@
                     }
                 },
                 {
-                    "id": 5,
-                    "categoryId": "category_web",
-                    "faIcon": "fa-solid fa-code",
-                    "faIconColors": { "bg": "#FF6B6B", "fill": "#ffffff" },
-                    "preview": {
-                        "links": [
-                            {
-                                "href": "https://www.shucode.lat/",
-                                "tooltipString": "visit_website",
-                                "faIcon": "fa-solid fa-globe"
-                            }
-                        ],
-                        "screenshots": [],
-                        "screenshotsAspectRatio": "16:9",
-                        "youtubeVideo": ""
-                    },
-                    "locales": {
-                        "en": {
-                            "title": "ShuCode.lat",
-                            "text": "Personal development portfolio and tech blog built from scratch. Modern full-stack web application showcasing projects, articles, and professional experience. <i>(Private repository)</i>"
-                        },
-                        "es": {
-                            "title": "ShuCode.lat",
-                            "text": "Portafolio de desarrollo personal y blog técnico construido desde cero. Aplicación web full-stack moderna que muestra proyectos, artículos y experiencia profesional. <i>(Repositorio privado)</i>"
-                        }
-                    }
-                },
-                {
                     "id": 6,
                     "categoryId": "category_utilities",
                     "faIcon": "fa-solid fa-book",
@@ -298,13 +270,7 @@
                     "faIcon": "fa-solid fa-graduation-cap",
                     "faIconColors": { "bg": "#4CAF50", "fill": "#ffffff" },
                     "preview": {
-                        "links": [
-                            {
-                                "href": "https://www.shucode.lat/",
-                                "tooltipString": "visit_website",
-                                "faIcon": "fa-solid fa-globe"
-                            }
-                        ],
+                        "links": [],
                         "screenshots": [],
                         "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
@@ -312,11 +278,11 @@
                     "locales": {
                         "en": {
                             "title": "CET - Kinal School Management System",
-                            "text": "Comprehensive educational administrative software for managing grades, donations, enrollments, and reports. Built with <b>Laravel</b>, <b>Inertia.js</b>, and <b>Vue.js</b>. <i>(Private repository)</i>"
+                            "text": "Comprehensive educational administrative software for managing grades, donations, enrollments, and reports. Built with <b>Laravel</b>, <b>Inertia.js</b>, and <b>Vue.js</b>. <i>(Internal institutional project — private repository, no public deployment)</i>"
                         },
                         "es": {
                             "title": "CET - Sistema Administrativo Kinal",
-                            "text": "Software administrativo educativo completo para gestión de notas, donaciones, inscripciones y reportes. Construido con <b>Laravel</b>, <b>Inertia.js</b> y <b>Vue.js</b>. <i>(Repositorio privado)</i>"
+                            "text": "Software administrativo educativo completo para gestión de notas, donaciones, inscripciones y reportes. Construido con <b>Laravel</b>, <b>Inertia.js</b> y <b>Vue.js</b>. <i>(Proyecto institucional interno — repositorio privado, sin despliegue público)</i>"
                         }
                     }
                 },
@@ -326,13 +292,7 @@
                     "faIcon": "fa-solid fa-brain",
                     "faIconColors": { "bg": "#9C27B0", "fill": "#ffffff" },
                     "preview": {
-                        "links": [
-                            {
-                                "href": "https://www.shucode.lat/",
-                                "tooltipString": "visit_website",
-                                "faIcon": "fa-solid fa-globe"
-                            }
-                        ],
+                        "links": [],
                         "screenshots": [],
                         "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
@@ -340,11 +300,11 @@
                     "locales": {
                         "en": {
                             "title": "KIARA - Kinal's AI Model",
-                            "text": "Exclusive artificial intelligence model developed for Kinal. Custom-trained AI system for educational and institutional purposes. <i>(Private repository)</i>"
+                            "text": "Exclusive artificial intelligence model developed for Kinal. Custom-trained AI system for educational and institutional purposes. <i>(Internal institutional project — private repository, no public deployment)</i>"
                         },
                         "es": {
                             "title": "KIARA - Modelo de IA de Kinal",
-                            "text": "Modelo de inteligencia artificial exclusivo desarrollado para Kinal. Sistema de IA personalizado para propósitos educativos e institucionales. <i>(Repositorio privado)</i>"
+                            "text": "Modelo de inteligencia artificial exclusivo desarrollado para Kinal. Sistema de IA personalizado para propósitos educativos e institucionales. <i>(Proyecto institucional interno — repositorio privado, sin despliegue público)</i>"
                         }
                     }
                 },
@@ -354,13 +314,7 @@
                     "faIcon": "fa-solid fa-file-invoice",
                     "faIconColors": { "bg": "#FF5722", "fill": "#ffffff" },
                     "preview": {
-                        "links": [
-                            {
-                                "href": "https://www.shucode.lat/",
-                                "tooltipString": "visit_website",
-                                "faIcon": "fa-solid fa-globe"
-                            }
-                        ],
+                        "links": [],
                         "screenshots": [],
                         "screenshotsAspectRatio": "16:9",
                         "youtubeVideo": ""
@@ -368,11 +322,11 @@
                     "locales": {
                         "en": {
                             "title": "FEEL Integrations - DTE Certification API",
-                            "text": "Integration API for electronic invoice and receipt certification (DTE). Handles validation, digital signatures, and compliance with tax authority requirements. <i>(Private repository)</i>"
+                            "text": "Integration API for electronic invoice and receipt certification (DTE). Handles validation, digital signatures, and compliance with tax authority requirements. <i>(Internal institutional project — private repository, no public deployment)</i>"
                         },
                         "es": {
                             "title": "Integraciones FEEL - API Certificación DTE",
-                            "text": "API de integración para certificación de facturas y recibos electrónicos (DTE). Maneja validación, firmas digitales y cumplimiento de requisitos tributarios. <i>(Repositorio privado)</i>"
+                            "text": "API de integración para certificación de facturas y recibos electrónicos (DTE). Maneja validación, firmas digitales y cumplimiento de requisitos tributarios. <i>(Proyecto institucional interno — repositorio privado, sin despliegue público)</i>"
                         }
                     }
                 }

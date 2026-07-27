@@ -112,6 +112,37 @@ const handlers = {
         }
         return response
     },
+
+    /**
+     * Sends an automatic acknowledgment email via the secure Cloud Function (Resend).
+     * Failures are swallowed so EmailJS delivery remains the source of truth for you.
+     * @param {{name: string, email: string, language?: string}} payload
+     * @return {Promise<{success: boolean}>}
+     */
+    sendContactAcknowledgment: async (payload) => {
+        const endpoint =
+            (typeof import.meta !== 'undefined' &&
+                import.meta.env &&
+                import.meta.env.VITE_CONTACT_ACK_URL) ||
+            '/api/contact-ack'
+
+        try {
+            const result = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: payload.name,
+                    email: payload.email,
+                    language: payload.language || 'es',
+                }),
+            })
+            if (!result.ok) return { success: false }
+            const data = await result.json().catch(() => ({}))
+            return { success: Boolean(data?.success) }
+        } catch (error) {
+            return { success: false }
+        }
+    },
 }
 
 const analytics = {
