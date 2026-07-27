@@ -6,6 +6,8 @@
 const ALLOWED_ORIGINS = [
     'https://brauporfafolio.web.app',
     'https://brauporfafolio.firebaseapp.com',
+    'https://www.jbrau.dev',
+    'https://jbrau.dev',
     'http://127.0.0.1:4173',
     'http://127.0.0.1:4174',
     'http://localhost:4173',
